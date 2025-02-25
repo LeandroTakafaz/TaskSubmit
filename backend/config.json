@@ -1,0 +1,5 @@
+{
+  "port": 3000,
+  "mongoURI": "mongodb://127.0.0.1:27017/loginDB",
+  "jwtSecret": "3a9f87bc11b2d06a8e5a74897c2d7f6b1f4f60b8e731f4aee3f38f8237b7c7cfb29d6542397a6e1d1c4a5342adf3e7b6"
+}
