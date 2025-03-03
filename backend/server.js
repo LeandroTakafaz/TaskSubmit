@@ -3,6 +3,8 @@ const path = require("path");
 const connectDB = require("./config/db");
 const cors = require("cors");
 const config = require("./config.json");
+const studentRoutes = require("./routes/studentRoutes");
+const professorRoutes = require("./routes/professorRoutes")
 const authRoutes = require("./routes/authRoutes");
 
 const app = express();
@@ -17,6 +19,8 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../public", "login.html"));
 });
 
+app.use("/api/student", studentRoutes);
+app.use("/api/professor", professorRoutes);
 app.use("/api/auth", authRoutes);
 
 const PORT = config.port || 3000;
