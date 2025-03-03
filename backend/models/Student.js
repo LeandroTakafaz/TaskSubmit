@@ -7,6 +7,7 @@ const StudentSchema = new mongoose.Schema({
     age: { type: Number, required: true },
     course: { type: String, required: true },
     gender: { type: String, required: true, enum: ["Masculino", "Feminino", "Outro"] },
+    turn: { type: String, required: true, enum: ["Integral", "Noturno", "Vespertino"] },
     period: { type: String, required: true }
 });
 

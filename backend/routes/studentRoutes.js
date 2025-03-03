@@ -5,7 +5,7 @@ const Professor = require("../models/Professor");
 const router = express.Router();
 
 router.post("/register", async (req, res) => {
-    const { name, email, password, age, course, gender, period } = req.body;
+    const { name, email, password, age, course, gender, turn, period } = req.body;
 
     try {
         let existingUser = await Student.findOne({ email }) || await Professor.findOne({ email });
@@ -18,7 +18,7 @@ router.post("/register", async (req, res) => {
 
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        const student = new Student({ name, email, password: hashedPassword, age, course, gender, period });
+        const student = new Student({ name, email, password: hashedPassword, age, course, gender, turn, period });
 
         await student.save();
 
