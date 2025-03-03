@@ -12,19 +12,21 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('/img/back1.jpg');
+    background: url('/public/imagens/fundo.jpeg');
     background-size: cover;
     background-position: center;
     margin: 0;
     padding: 0;
     min-height: 100vh;
 }
+
+/* Lado Esquerdo */
 .wrapper {
     position: relative;
     width: 750px;
     height: 450px;
-    background: transparent;
-    border: 2px solid rgb(52, 187, 176);
+    background: linear-gradient(45deg, #05121b, #288DBD);
+    border: 2px solid #CBCBCB;
     overflow: hidden;
 }
 
@@ -66,9 +68,8 @@ body {
 }
 
 .wrapper .form-box.register {
-    
     pointer-events: auto;
-
+    
 }
 
 .wrapper .form-box.register .animation {
@@ -77,8 +78,6 @@ body {
     filter: blur(10px);
     transition: .7s ease;
     transition-delay:calc(.1s *var(--j));
-
-    
 }
 
 .wrapper.active .form-box.register .animation{
@@ -88,7 +87,6 @@ body {
       transition-delay:calc(.1s *var(--i));
 
   }
-  
 
 .form-box h2 {
     font-size: 32px;
@@ -174,7 +172,7 @@ color: #0ef
     left: 0;
     width: 100%;
     height: 300%;
-    background: linear-gradient(#081b29,rgb(79, 193, 201), #081b29,#55b9c0);
+    background: linear-gradient(#288DBD,#474747, #288DBD,#CBCBCB);
     z-index: -1;
     transition: .5s;
 }
@@ -193,7 +191,7 @@ top: 0;
 }
 
 .logreg-link p a {
-    color: #3d8888;
+    color: #288DBD;
     text-decoration: none;
     font-weight: 600;
 }
@@ -274,14 +272,15 @@ top: 0;
     font-size: 16px;
     color: #fff;
 }
+/* Lado Direito */
 .wrapper .bg-animate {
     position: absolute;
     top: -4px;
     right: 0;
     width: 850px;
     height: 600px;
-    background: linear-gradient(45deg, #081b29, #0f686e);
-    border-bottom: 3px solid #0f686e;
+    background: linear-gradient(45deg, #081b29, #CBCBCB);
+    border-bottom: 3px solid #CBCBCB;
     transform: rotate(10deg) skewY(40deg);
     transform-origin: bottom right;
     transition: 1.5s ease;
@@ -300,8 +299,8 @@ top: 0;
     left: 250px;
     width: 850px;
     height: 700px;
-    background: url('image/bg.png');
-    border-top: 3px solid #0ef;
+    background: linear-gradient(45deg, #081b29, #288DBD);
+    border-top: 3px solid #CBCBCB;
     transform: rotate(0) skewY(0);
     transform-origin: bottom left;
     transition: 1.5s ease;
@@ -312,6 +311,3 @@ top: 0;
     transform: rotate(-11deg) skewY(-41deg);
     transition-delay: 1.2s;
   }
-
-
- 
