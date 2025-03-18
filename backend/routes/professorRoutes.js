@@ -33,15 +33,6 @@ router.post("/register", async (req, res) => {
     }
 });
 
-router.get("/", async (req, res) => {
-    try {
-        const professors = await Professor.find();
-        res.json(professors);
-    } catch (err) {
-        res.status(500).json({ msg: "Erro ao buscar professores" });
-    }
-});
-
 router.get("/:id", async (req, res) => {
     try {
         const professor = await Professor.findById(req.params.id);
@@ -109,5 +100,29 @@ router.delete("/:id", async (req, res) => {
         res.status(500).json({ msg: "Erro ao deletar professor" });
     }
 });
+
+router.get("/", async (req, res) => {
+    try {
+        let { page, limit } = req.query;
+
+        page = parseInt(page) || 1;
+        limit = parseInt(limit) || 10;
+        const skip = (page - 1) * limit;
+
+        const total = await Professor.countDocuments();
+        const professors = await Professor.find().skip(skip).limit(limit);
+
+        res.json({
+            total,
+            totalPages: Math.ceil(total / limit),
+            currentPage: page,
+            professors
+        });
+
+    } catch (err) {
+        res.status(500).json({ msg: "Erro ao buscar professores" });
+    }
+});
+
 
 module.exports = router;
