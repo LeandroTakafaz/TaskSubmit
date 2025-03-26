@@ -100,9 +100,13 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Resposta do servidor:", data);
 
             if (response.ok) {
-                alert("Login realizado!");
-                localStorage.setItem("token", data.token); //Deixar para fazer a parte do back depois...
-                window.location.href = "dashboard.html"; //Um exemplo, pode ser a tela de ADM
+                localStorage.setItem("token", data.token);
+
+                if (data.user.role === "student") {
+                    window.location.href = "./TelaDeAula/tela.html";
+                } else if (data.user.role === "professor") {
+                    window.location.href = "./TelaDeProfessor/tela.html";
+                }
             } else {
                 alert(`Erro: ${data.msg}`);
             }
