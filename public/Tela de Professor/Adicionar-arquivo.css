@@ -1,0 +1,138 @@
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fc;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .sidebar img {
+      width: 50%;
+      margin-bottom: 20px;
+    }
+
+    .menu-item {
+      margin: 15px 0;
+      cursor: pointer;
+      transition: background 0.3s;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    .menu-item:hover {
+      background-color: #0059b3;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+
+    .header {
+      background-color: #003366;
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 8px;
+    }
+
+    .upload-container {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .upload-container h2 {
+      margin-top: 0;
+      color: #003366;
+    }
+
+    .upload-container label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    .upload-container select,
+    .upload-container input[type="file"],
+    .upload-container button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .upload-container button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .upload-container button:hover {
+      background-color: #0059b3;
+    }
+
+    .uploaded-files {
+      margin-top: 20px;
+    }
+
+    .uploaded-files h3 {
+      color: #003366;
+    }
+
+    .uploaded-files ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .uploaded-files li {
+      background: #f4f7fc;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-left: 5px solid #003366;
+      border-radius: 4px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .menu-item {
+        flex: 1 0 40%;
+        margin: 5px;
+      }
+
+      .main-content {
+        padding: 10px;
+      }
+    }

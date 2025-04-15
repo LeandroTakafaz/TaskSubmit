@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Aluno</title>
+    <link rel="stylesheet" href="/Tela de Aula/tela.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="/Tela de Aula/imag/194931.png" alt="User Icon">
+        
+        <!-- Nome e código da turma -->
+        <div class="turma-info">
+            <strong>Alex Ranysson da Silva Soares</strong><br>
+            <strong>Código: 224565</strong>
+        </div>
+
+        <!-- Barra de pesquisa com ícone -->
+        <div class="search-bar">
+            <span class="search-icon"><i class="fas fa-search"></i></span>
+            <input type="text" placeholder="Pesquisar...">
+        </div>
+
+        <div class="menu-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-pin-angle-fill" viewBox="0 0 16 16">
+                <path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a6 6 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707s.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a6 6 0 0 1 1.013.16l3.134-3.133a3 3 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146"/>
+            </svg> Mural
+        </div>
+        <div class="menu-item" onclick="redirecionarHorarioAula()">
+            <i class="fas fa-calendar-alt"></i> Horários de aula
+        </div>
+        <div class="menu-item" onclick="redirecionarGradeCurricular()">
+            <i class="fas fa-book"></i> Grade Curricular
+        </div>
+        <div class="menu-item" onclick="redirecionarCentralAluno()">
+            <i class="fas fa-user-graduate"></i> Central do Aluno
+        </div>
+        <div class="menu-item"><i class="fas fa-folder"></i> Arquivo</div>
+        <div class="menu-item"><i class="fas fa-dollar-sign"></i> Financeiro</div>
+        <div class="menu-item"><i class="fas fa-comments"></i> ChatBox</div>
+    </div>
+
+    <div class="main-content">
+        <div class="header">PORTAL DO ALUNO
+            <div class="header-icons">
+                <span><i class="fas fa-cog"></i></span> <!-- Configurações -->
+                <span><i class="fas fa-bell"></i></span> <!-- Notificações -->
+                <span><i class="fas fa-door-open"></i></span> <!-- Sair -->
+            </div>
+        </div>
+        <!-- AVISO DE BOAS-VINDAS PARA OS ALUNOS -->
+        <div class="aviso-aluno">
+            <strong><i class="fas fa-graduation-cap"></i> Bem-vindos, novos alunos! 🎓</strong><br>
+            Estamos muito felizes em recebê-los no nosso portal acadêmico! Aqui você encontrará todas as informações necessárias para sua jornada acadêmica. Explore os recursos disponíveis e aproveite ao máximo essa nova fase! 🚀
+        </div>
+                <!-- NOVAS INFORMAÇÕES ABAIXO DA MENSAGEM DE BOAS-VINDAS -->
+        <div class="info-container">
+            <a href="https://www.youtube.com/watch?v=MUC4Z-oKABY" class="info-box" style="text-decoration: none; color: inherit;">
+            <img src="/Tela de Aula/imag/aulasOnline.jpg" alt="Aulas Online" class="info-img">
+            <p><strong>Apresentação da Escolaridade</strong><br>Assista o video da apresentação da Escolaridade.</p>
+        </a>
+    
+            <a href="https://fametro.edu.br/central-de-atendimento-ao-academico/" class="info-box" style="text-decoration: none; color: inherit;">
+            <img src="/Tela de Aula/imag/Suporte Acadêmico.png" alt="Suporte Acadêmico" class="info-img">
+            <p><strong>Suporte Acadêmico</strong><br>Entre em contato com nossos tutores para esclarecer dúvidas e obter apoio.</p>
+         </a>
+</div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2025 Portal Acadêmico. Todos os direitos reservados.</p>
+        <p>E-mail: <a href="mailto:suporte@portalacademico.com.br">suporte@portalacademico.com.br</a> | Telefone: (92) 99212-2244</p>
+        <div class="social-icons">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    <!-- Funções JavaScript -->
+    <script>
+        function redirecionarHorarioAula() {
+            window.location.href = "Horário-de-Aula.html"; // Redireciona para a página correta
+        }
+
+        function redirecionarGradeCurricular() {
+            window.location.href = "Grade-Curricular.html"; // Redireciona para a página da grade curricular
+        }
+        function redirecionarCentralAluno() {
+            window.location.href = "Central-de-aluno.html"; // Redireciona para a página da grade curricular
+        }
+    </script>
+</body>
+</html>

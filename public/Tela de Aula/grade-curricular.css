@@ -1,0 +1,115 @@
+/* Configuração geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Fundo neutro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Estilização da barra lateral */
+.sidebar {
+    width: 250px;
+    background-color: #2980b9; /* Azul Claro */
+    color: #ecf0f1; /* Texto branco */
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.turma-info {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Itens do menu */
+.menu-item {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.menu-item i {
+    margin-right: 10px;
+}
+
+.menu-item:hover {
+    background-color: #40bc1a; /* Cor de destaque */
+    color: white;
+}
+
+/* Botão de sair */
+.sair {
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+}
+
+.sair:hover {
+    background-color: #c0392b;
+}
+
+/* Estilização do conteúdo principal */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #2980b9;
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Mensagem de aviso */
+.aviso-aluno {
+    background-color: #27ae60;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+/* Tabela da Grade Curricular */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #2980b9;;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #ecf0f1;
+}

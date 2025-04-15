@@ -108,51 +108,91 @@
             color: #0d47a1;
         }
 
-        /* Estilização do Rodapé */
-        .footer {
-            background-color: #1f78a7;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-size: 14px;
-        }
 
-        .footer a {
-            color: #ffeb3b;
-            text-decoration: none;
-            margin: 0 10px;
-        }
+       /* Garante que a página inteira tenha altura mínima de 100% da viewport */
+       html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
 
-        .footer a:hover {
-            text-decoration: underline;
-        }
+    body {
+        background: #f4f4f4;
+    }
 
-        .footer .social-icons {
-            margin-top: 5px;
-        }
+    .main-content {
+        flex: 1;
+        padding-bottom: 20px; /* Espaço para o rodapé não sobrepor o conteúdo */
+    }
 
-        .footer .social-icons a {
-            color: white;
-            margin: 0 8px;
-            font-size: 18px;
-        }
+    /* Sidebar */
+    .sidebar {
+        width: 250px;
+        background-color: #1f78a7;
+        color: white;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        padding: 20px;
+    }
 
-        .footer .social-icons a:hover {
-            color: #ffeb3b;
-        }
+    /* Conteúdo com espaço da sidebar */
+    .main-content {
+        margin-left: 270px;
+        padding: 20px;
+    }
+
+    /* Rodapé fixado no final */
+    .footer {
+        background-color: #1f78a7;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .footer p {
+        margin: 4px 0;
+        display: inline-block;
+    }
+
+    .footer a {
+        color: #ffeb3b;
+        text-decoration: none;
+        margin: 0 3px;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+    .footer .social-icons {
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .footer .social-icons a {
+        color: white;
+        margin: 0 8px;
+        font-size: 18px;
+        transition: color 0.3s ease;
+        display: inline-block;
+    }
+
+    .footer .social-icons a:hover {
+        color: #ffeb3b;
+    }
+
         /* Final  do Rodapé */
         
-        /* Estilização do nome do aluno */
-        .student-name {
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-            color: white;
-            margin-top: 8px;
-            }
+        /*Texto de baixo da imagem*/
+        .turma-info {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #fff;
+        }
 
      /*Define às cores dos ícones em anexo. */
         .menu-item {
@@ -174,3 +214,36 @@
         .social-icons a i {
             color: black; /* Ícones das redes sociais em preto */
         }
+
+
+        /* Contêiner das novas informações */
+.info-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+/* Caixa individual de cada informação */
+.info-box {
+    width: 45%;
+    background-color: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de animação ao passar o mouse */
+.info-box:hover {
+    transform: scale(1.05);
+}
+
+/* Estilização das imagens animadas */
+.info-img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
