@@ -1,96 +1,151 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel Administrativo</title>
-    <link rel="stylesheet" href="admin.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <title>@TaskSubmit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/public/admin.css">
 </head>
 
-<body>
-    <div class="sidebar">
-        <div style="text-align: center; margin-bottom: 20px;">
-            <img src="user_icon.png" alt="Usuário" width="50">
-        </div>
-        <button>ALUNO</button>
-        <button>PROFESSOR</button>
-    </div>
-    <div class="main">
-        <div class="top-bar">
-            <input type="search" placeholder="Buscar...">
-            <div>
-                <button>🔧</button>
-                <button>🚪</button>
+<body id="body-pd">
+
+    <!-- NAVBAR -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-bag-check-fill"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z" />
+                </svg>
             </div>
-        </div>
-        <div class="table-resposive">
-            <table class="table table-hover table-dark">
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Matrícula</th>
-                        <th scope="col">Curso</th>
-                        <th scope="col">Área</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>2250504</td>
-                        <td>Sistemas de Informação</td>
-                        <td>Tecnologia</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacó</td>
-                        <td>5291034</td>
-                        <td>Medicina</td>
-                        <td>Saúde</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry the Bird</td>
-                        <td>7583922</td>
-                        <td>Física</td>
-                        <td>Exatas</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <nav id="pagination">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Anterior">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Anterior</span>
+            <div class="navbar-menu">
+                <a href="#" class="navbar-link">TaskSubmit</a>
+                <a href="#" class="navbar-link">Finanças</a>
+                <a href="#" class="navbar-link">Tablet</a>
+                <a href="#" class="navbar-link">Laptop</a>
+                <a href="#" class="navbar-link">Help</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <div class="collapse-wrapper">
+                    <a href="#" class="nav_collapse" id="sidebarCollapse">
+                        <div class="collapse-circle">
+                            <i class='bi bi-chevron-double-left collapse-icon'></i>
+                        </div>
                     </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Próximo">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Próximo</span>
+                </div>
+                <a href="#" class="nav_logo">
+                    <i class='bi bi-grid-fill nav_logo-icon'></i>
+                    <span class="nav_logo-name">Menu</span>
+                </a>
+
+                <div class="nav_list">
+                    <a href="#" class="nav_link active">
+                        <i class='bi bi-house-fill nav_icon'></i>
+                        <span class="nav_name">Dashboard</span>
                     </a>
-                </li>
-            </ul>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-card-checklist nav_icon'></i>
+                        <span class="nav_name">Tasks</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-bar-chart-fill nav_icon'></i>
+                        <span class="nav_name">Reports</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-people-fill nav_icon'></i>
+                        <span class="nav_name">Team</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-gear-fill nav_icon'></i>
+                        <span class="nav_name">Settings</span>
+                    </a>
+                </div>
+            </div>
         </nav>
     </div>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<div class="content" id="content">
+    <div class="main-content">
+        <!-- Conteúdo principal vai aqui -->
+        <div style="min-height: calc(100vh - 180px); padding: 20px;">
+            <!-- Espaço para o conteúdo -->
+            <div class="container">  
+                <form id="contact" action="" method="post">
+                  <h3>Registro do Professor</h3>
+                  
+                  <fieldset>
+                    <input placeholder="Nome" type="text" id="name" name="name" tabindex="1" required autofocus>
+                  </fieldset>
+                  <fieldset>
+                    <select placeholder="Gênero" type="select" id="gender" name="gender" tabindex="2" required>
+                      <option value="" disabled selected>Selecione seu gênero</option>  
+                      <option value="Masculino">Masculino</option>
+                      <option value="Feminino">Feminino</option>
+                      <option value="Outro">Outro</option>
+                      <option value="Prefiro não dizer">Prefiro não dizer</option>
+                    </select>
+                  </fieldset>
+                  <fieldset>
+                    <select placeholder="Turno" type="select" id="turn" name="turn" tabindex="3" required>
+                        <option value="" disabled selected>Selecione seu turno</option>
+                        <option value="Manhã">Manhã</option>
+                        <option value="Tarde">Tarde</option>
+                        <option value="Noite">Noite</option>
+                    </select>
+                  </fieldset>
+                  <fieldset>
+                    <input placeholder="Email" type="email" id="email" name="email" tabindex="4" required>
+                  </fieldset>
+                  <fieldset>
+                    <input placeholder="Senha" type="password" id="password" name="password" tabindex="4" required>
+                  </fieldset>
+                    <fieldset>
+                        <input placeholder="CPF" type="text" id="cpf" name="cpf" maxlength="14" required>
+                    </fieldset>
+                    <fieldset>
+                        <input placeholder="Máteria" type="text" id="subject" name="subject" required>
+                    </fieldset>
+                  <fieldset>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                  </fieldset>
+                </form>
+              </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER NOVO -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <h3>@TaskSubmit</h3>
+            <p>Transformando o Ensino com estilo.</p>
+        </div>
+        <div class="footer-right">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/public/admin.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
