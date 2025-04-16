@@ -67,17 +67,17 @@ body {
 /* Estilização do conteúdo principal */
 .main-content {
     flex: 1;
-    padding: 20px;
+    
 }
 
 /* Cabeçalho */
 .header {
-    background-color: #2980b9;
+    background-color: #608fa8;
     color: white;
-    padding: 15px;
+    padding: 50px;
     font-size: 22px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
 }
 
 /* Mensagem de aviso */

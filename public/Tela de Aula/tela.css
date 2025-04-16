@@ -36,61 +36,40 @@
             border: none;
         }
         .menu-item {
+            margin-top: 20px;
             width: 100%;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
             cursor: pointer;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            
         }
         .menu-item:hover {
             background-color: #166589;
+            border: 1px solid rgb(98, 98, 209);
+            border-radius: 25px;
         }
         .main-content {
             flex: 1;
             background-color: #ccc;
             display: flex;
             flex-direction: column;
+            border: none;
         }
         .header {
-            background-color: #1f78a7;
+            background-color: #608fa8;
             color: white;
-            padding: 15px;
+            padding: 50px;
             font-size: 24px;
             font-weight: bold;
         }
         .header-icons {
             position: absolute;
-            right: 20px;
-            top: 20px;
+            right: 30px;
+            top: 30px;
         }
         .header-icons span {
             margin-left: 15px;
             cursor: pointer;
-        }
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-            background: white;
-            padding: 5px;
-            border-radius: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            margin: 10px;
-        }
-
-        .search-bar input {
-            border: none;
-            outline: none;
-            padding: 8px;
-            font-size: 14px;
-            width: 100%;
-            border-radius: 20px;
-        }
-
-        .search-bar .search-icon {
-            margin-left: 8px;
-            color: #666;
-            font-size: 16px;
         }
 
         .aviso-aluno {
@@ -122,13 +101,14 @@
     }
 
     .main-content {
+        border: none;
         flex: 1;
         padding-bottom: 20px; /* Espaço para o rodapé não sobrepor o conteúdo */
     }
 
     /* Sidebar */
     .sidebar {
-        width: 250px;
+        width: 270px;
         background-color: #1f78a7;
         color: white;
         position: fixed;
@@ -140,12 +120,12 @@
     /* Conteúdo com espaço da sidebar */
     .main-content {
         margin-left: 270px;
-        padding: 20px;
+        border: none;
     }
 
     /* Rodapé fixado no final */
     .footer {
-        background-color: #1f78a7;
+        background-color: #608fa8;
         color: white;
         padding: 15px;
         text-align: center;
@@ -238,6 +218,7 @@
 /* Efeito de animação ao passar o mouse */
 .info-box:hover {
     transform: scale(1.05);
+    border: 1px solid #0d47a1;
 }
 
 /* Estilização das imagens animadas */

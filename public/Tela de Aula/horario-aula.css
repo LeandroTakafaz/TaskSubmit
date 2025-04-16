@@ -10,7 +10,7 @@ body {
     background-color: #ccc;
 }
 .sidebar {
-    width: 250px;
+    width: 270px;
     background-color: #2980b9;
     color: white;
     padding: 20px;
@@ -56,18 +56,19 @@ body {
 }
 .sair:hover {
     background-color: darkred;
+    transform: scale(1.05);
 }
 .main-content {
     flex: 1;
-    padding: 20px;
+    
 }
 .header {
-    background-color: #2980b9;
+    background-color: #608fa8;
     color: white;
-    padding: 15px;
+    padding: 50px;
     font-size: 24px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
 }
 .aviso-aluno {
     background-color: #e3f2fd;
