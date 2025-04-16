@@ -9,7 +9,7 @@
             height: 100vh;
         }
         .sidebar {
-            width: 250px;
+            width: 270px;
             background-color: #1f78a7;
             color: white;
             padding: 20px;
@@ -36,11 +36,12 @@
             border: none;
         }
         .menu-item {
+            margin-top: 20px;
             width: 100%;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
             cursor: pointer;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            
         }
         .menu-item:hover {
             background-color: #166589;
@@ -52,16 +53,16 @@
             flex-direction: column;
         }
         .header {
-            background-color: #1f78a7;
+            background-color: #608fa8;
             color: white;
-            padding: 15px;
+            padding: 50px;
             font-size: 24px;
             font-weight: bold;
         }
         .header-icons {
             position: absolute;
-            right: 20px;
-            top: 20px;
+            right: 30px;
+            top: 50px;
         }
         .header-icons span {
             margin-left: 15px;
@@ -83,26 +84,7 @@
         .aviso-aluno strong {
             color: #0d47a1;
         }
-        /*Barra de pesquisa com ícone */ 
-        .search-bar {
-            display: flex;
-            align-items: center;
-            background: white;
-            padding: 5px;
-            border-radius: 5px;
-        }
-
-        .search-bar input {
-            border: none;
-            outline: none;
-            padding: 5px;
-            flex: 1;
-        }
-
-        .search-icon {
-            color: black;
-            padding: 5px;
-        }
+      
         /* Final */ 
 
         /*Ícones das cores de texto e ícones*/
@@ -112,6 +94,7 @@
             display: flex;
             align-items: center;
             gap: 10px; /* Espaço entre o ícone e o texto */
+            border-top: 30px;
         }
         .menu-item i {
             font-size: 20px;
@@ -144,6 +127,7 @@
             /* Efeito de animação ao passar o mouse */
         .info-box:hover {
             transform: scale(1.05);
+            border: 1px solid blueviolet;
         }
 
             /* Estilização das imagens animadas */
@@ -176,24 +160,24 @@
 
         /* Sidebar */
         .sidebar {
-            width: 250px;
+            width: 270px;
             background-color: #1f78a7;
             color: white;
             position: fixed;
             top: 0;
             bottom: 0;
-            padding: 20px;
+            
         }
 
         /* Conteúdo com espaço da sidebar */
         .main-content {
             margin-left: 270px;
-            padding: 20px;
+            
         }
 
         /* Rodapé fixado no final */
         .footer {
-            background-color: #1f78a7;
+            background-color: #608fa8;
             color: white;
             padding: 15px;
             text-align: center;

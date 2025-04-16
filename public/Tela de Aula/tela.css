@@ -9,7 +9,7 @@
             height: 100vh;
         }
         .sidebar {
-            width: 250px;
+            width: 270px;
             background-color: #1f78a7;
             color: white;
             padding: 20px;
@@ -64,8 +64,8 @@
         }
         .header-icons {
             position: absolute;
-            right: 30px;
-            top: 30px;
+            right: 40px;
+            top: 50px;
         }
         .header-icons span {
             margin-left: 15px;
