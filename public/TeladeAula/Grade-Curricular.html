@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Curricular - Portal do Aluno</title>
-    <link rel="stylesheet" href="/public/Tela de Aula/grade-curricular.css">
+    <link rel="stylesheet" href="./grade-curricular.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
     <div class="sidebar">
-        <img src="/public/Tela de Aula/imag/194931.png" alt="User Icon" class="user-icon">
-        
+        <img src="./imag/194931.png" alt="User Icon" class="user-icon">
+
         <!-- Nome e código da turma -->
         <div class="turma-info">
             <strong>Alex Ranysson da Silva Soares</strong><br>
@@ -32,7 +34,7 @@
             <strong><i class="fas fa-info-circle"></i> Confira sua grade!</strong><br>
             Aqui você pode visualizar as disciplinas do seu curso, a carga horária e os períodos.
         </div>
-        
+
         <table>
             <tr>
                 <th>Disciplina</th>
@@ -69,11 +71,11 @@
 
     <script>
         function sairDoSistema() {
-            if (confirm("Tem certeza que deseja sair?")) 
-            {
+            if (confirm("Tem certeza que deseja sair?")) {
                 window.location.href = "tela.html"; // Ajuste para a página inicial correta
             }
         }
     </script>
 </body>
+
 </html>

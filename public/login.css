@@ -6,7 +6,8 @@
 }
 
 :root {
-    --primary-color: #091F2C;;
+    --primary-color: #091F2C;
+    ;
     --second-color: #ffffff;
     --black-color: #ffffff;
 }
@@ -110,7 +111,7 @@ a:hover {
     outline: none;
 }
 
-#user {
+#login-email {
     margin-bottom: 10px;
 }
 

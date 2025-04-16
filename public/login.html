@@ -11,7 +11,8 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="login.css">
@@ -25,16 +26,16 @@
 
                 <span> Login</span>
             </div>
-            <form action="" get="" enctype="multipart/form-data" onsubmit="return login()">
+            <form id="login-form">
                 <div class="input-box">
-                    <input type="text" id="user" class="input-field" required>
+                    <input type="email" id="login-email" class="input-field" required>
 
-                    <label for="email" class="label">Email</label>
+                    <label for="login-email" class="label">Email</label>
                     <i class="bx bx-user icon"></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" id="pass" class="input-field" autocomplete="off">
-                    <label for="pass" class="label">Senha</label>
+                    <input type="password" id="login-password" class="input-field" autocomplete="off">
+                    <label for="login-password" class="label">Senha</label>
                     <i class="bx bx-lock-alt icon" id="show-password">
                     </i>
                 </div>
@@ -57,4 +58,6 @@
     </div>
 </body>
 <script src="login.js"></script>
+<script src="./script.js"></script>
+
 </html>
