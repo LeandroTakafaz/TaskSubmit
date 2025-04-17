@@ -238,3 +238,64 @@
             font-size: 14px;
             color: #fff;
         }
+
+        /**************************************************************/
+
+         /*CSS DO GERENCIAR TURMA */
+         .turmas-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .turma-card {
+            background-color: #f8f9fa;
+            border-left: 5px solid #007bff;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .turma-card h3 {
+            margin-top: 0;
+        }
+        
+        .turma-actions {
+            margin-top: 10px;
+        }
+        
+        .turma-actions button {
+            margin-right: 10px;
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        
+        .turma-actions button:hover {
+            background-color: #0056b3;
+        }
+        
+        .adicionar-turma {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .adicionar-turma button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .adicionar-turma button:hover {
+            background-color: #218838;
+        }
+
+
