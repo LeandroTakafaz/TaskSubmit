@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adicionar Atividade - Portal do Professor</title>
+    <link rel="stylesheet" href="tela.css"/>
+    <link rel="stylesheet" href="atividades.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body id="body-pd">
+
+    <!-- NAVBAR -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-bag-check-fill"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z" />
+                </svg>
+            </div>
+            <div class="navbar-menu">
+                <a href="#" class="navbar-link">TaskSubmit</a>
+                <a href="#" class="navbar-link">Finanças</a>
+                <a href="#" class="navbar-link">Atividades</a>
+                <a href="#" class="navbar-link">Rematrícula</a>
+                <a href="#" class="navbar-link">Suporte</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <div class="collapse-wrapper">
+                    <a href="#" class="nav_collapse" id="sidebarCollapse">
+                        <div class="collapse-circle">
+                            <i class='bi bi-chevron-double-left collapse-icon'></i>
+                        </div>
+                    </a>
+                </div>
+                <a href="#" class="nav_logo">
+                    <i class='bi bi-grid-fill nav_logo-icon'></i>
+                    <span class="nav_logo-name">Menu</span>
+                </a>
+
+                <div class="nav_list">
+                    <a href="#" class="nav_link active">
+                        <i class='bi bi-house-fill nav_icon'></i>
+                        <span class="nav_name">Dashboard</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-card-checklist nav_icon'></i>
+                        <span class="nav_name">Atividades</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-bar-chart-fill nav_icon'></i>
+                        <span class="nav_name">Desempenho</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-people-fill nav_icon'></i>
+                        <span class="nav_name">Grade Curricular</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-gear-fill nav_icon'></i>
+                        <span class="nav_name">Configurações</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<div class="content" id="content">
+    <div class="main-content">
+        <!-- TÍTULO PRINCIPAL DA PÁGINA -->
+        <div class="aviso-aluno">
+            <strong><i class="fas fa-tasks"></i> Adicionar Atividade para Alunos 📝</strong><br />
+            Aqui você poderá criar atividades e tarefas para engajar seus alunos. Siga as instruções abaixo para
+            garantir que tudo esteja configurado corretamente!
+        </div>
+    
+        <!-- CONTEÚDO PRINCIPAL -->
+        <div class="info-container">
+            <div class="info-box">
+                <img src="./imag/Atividade.jpg" alt="Descrição da Atividade" class="info-img" />
+                <p><strong>Passo 1: Defina o título e a descrição</strong><br />Crie um título claro e uma descrição
+                    detalhada para que os alunos entendam o objetivo da atividade.</p>
+            </div>
+    
+            <div class="info-box">
+                <img src="./imag/selecionar-turma.png" alt="Selecionar Turma" class="info-img" />
+                <p><strong>Passo 2: Escolha a turma</strong><br />Selecione para qual turma a atividade será destinada,
+                    garantindo que os alunos corretos a recebam.</p>
+            </div>
+    
+            <div class="info-box">
+                <img src="./imag/data-entrega.png" alt="Definir Data de Entrega" class="info-img" />
+                <p><strong>Passo 3: Defina uma data de entrega</strong><br />Estabeleça um prazo para que os alunos
+                    saibam até quando precisam enviar as respostas.</p>
+            </div>
+    
+            <div class="info-box">
+                <img src="./imag/publicar.png" alt="Publicar Atividade" class="info-img" />
+                <p><strong>Passo 4: Publique a atividade</strong><br />Após preencher todas as informações, clique em
+                    "Publicar" para disponibilizar a atividade aos alunos.</p>
+            </div>
+        </div>
+    
+        <!-- AVISO IMPORTANTE -->
+        <div class="aviso-aluno" style="margin-top: 20px; background-color: #fff3cd; color: #856404;">
+            <strong><i class="fas fa-exclamation-triangle"></i> Atenção!</strong><br/>
+            Antes de publicar, revise todas as informações para garantir que a atividade esteja correta. Após a
+            publicação, os alunos terão acesso imediato.
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER NOVO -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <h3>@TaskSubmit</h3>
+            <p>Transformando o Ensino com estilo.</p>
+        </div>
+        <div class="footer-right">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="admin.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

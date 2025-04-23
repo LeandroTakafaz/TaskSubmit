@@ -17,3 +17,41 @@ document.addEventListener('DOMContentLoaded', function() {
             : 'rotate(0deg)';
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const openModalButtons = document.querySelectorAll('[data-modal-target]');
+    const closeModalButtons = document.querySelectorAll('.close-button');
+    const modals = document.querySelectorAll('.modal');
+
+    function openModal(modal) {
+        if (modal == null) return;
+        modal.style.display = 'block';
+        document.body.classList.add('modal-open'); // Opcional: para desabilitar o scroll do fundo
+    }
+
+    function closeModal(modal) {
+        if (modal == null) return;
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open'); // Opcional: reabilita o scroll do fundo
+    }
+
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = document.querySelector(button.dataset.modalTarget);
+            openModal(modal);
+        });
+    });
+
+    closeModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal');
+            closeModal(modal);
+        });
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target.classList.contains('modal')) {
+            closeModal(event.target);
+        }
+    });
+});

@@ -67,12 +67,11 @@ body {
 
 /* CONTEÚDO */
 .content {
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
 }
 
 .main-content {
-    margin-left: 250px;
     padding: 20px;
     width: calc(100% - 250px);
 }
@@ -321,28 +320,6 @@ body {
     transform: translateX(-50%);
 }
 
-#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px Inter, sans-serif; }
-
-#contact {
-	background:#F9F9F9;
-	padding:25px;
-	margin:50px 0;
-}
-
-#contact h3 {
-	color: #000;
-	display: block;
-	font-size: 1.8em;
-	font-weight: 500;
-  padding: 12px 0;
-}
-
-#contact h4 {
-	margin:5px 0 15px;
-	display:block;
-	font-size:13px;
-}
-
 fieldset {
 	border: medium none !important;
 	margin: 0 0 10px;
@@ -351,52 +328,217 @@ fieldset {
 	width: 100%;
 }
 
-#contact input[type="text"],#contact input[type="password"], #contact input[type=""] ,#contact select[type="select"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
-	width:100%;
-	border:1px solid #CCC;
-	background:#FFF;
-	margin:0 0 5px;
-	padding:10px;
+/* Professor */
+#teacher-register input[type="text"],
+#teacher-register input[type="email"],
+#teacher-register input[type="tel"],
+#teacher-register input[type="url"],
+#teacher-register textarea,
+#teacher-register button[type="submit"],
+#teacher-register input[type="password"],
+#teacher-register input[type=""],
+#teacher-register select[type="select"] {
+    font: 400 12px/16px Inter, sans-serif;
 }
 
-#contact input[type="text"]:hover, #contact input[type="password"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
-	-webkit-transition:border-color 0.3s ease-in-out;
-	-moz-transition:border-color 0.3s ease-in-out;
-	transition:border-color 0.3s ease-in-out;
-	border:1px solid #AAA;
+#teacher-register {
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 0 auto;
 }
 
-#contact textarea {
-	height:100px;
-	max-width:100%;
-  resize:none;
+#teacher-register h3 {
+    color: #000;
+    display: block;
+    font-size: 1.8em;
+    font-weight: 500;
+    padding: 12px 0;
 }
 
-#contact button[type="submit"] {
-	cursor:pointer;
-	width:100%;
-	border:none;
-	background:#000;
-  font-family: Inter;
-	color:#FFF;
-	margin:0 0 5px;
-	padding:10px;
-	font-size:15px;
+#teacher-register h4 {
+    margin: 5px 0 15px;
+    display: block;
+    font-size: 13px;
 }
 
-#contact button[type="submit"]:hover {
-	background:#09C;
-	-webkit-transition:background 0.3s ease-in-out;
-	-moz-transition:background 0.3s ease-in-out;
-	transition:background-color 0.3s ease-in-out;
+#teacher-register fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
 }
 
-#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
-
-#contact input:focus, #contact textarea:focus {
-	outline:0;
-	border:1px solid #999;
+#teacher-register input[type="text"],
+#teacher-register input[type="password"],
+#teacher-register input[type=""],
+#teacher-register select[type="select"],
+#teacher-register input[type="email"],
+#teacher-register input[type="tel"],
+#teacher-register input[type="url"],
+#teacher-register textarea {
+    width: 100%;
+    border: 1px solid #CCC;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
 }
+
+#teacher-register input[type="text"]:hover,
+#teacher-register input[type="password"]:hover,
+#teacher-register input[type="email"]:hover,
+#teacher-register input[type="tel"]:hover,
+#teacher-register input[type="url"]:hover,
+#teacher-register textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #AAA;
+}
+
+#teacher-register textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+
+#teacher-register button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #000;
+    font-family: Inter;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+#teacher-register button[type="submit"]:hover {
+    background: #09C;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#teacher-register button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#teacher-register input:focus,
+#teacher-register textarea:focus {
+    outline: 0;
+    border: 1px solid #999;
+}
+
+#student-register input[type="text"],
+#student-register input[type="email"],
+#student-register input[type="tel"],
+#student-register input[type="url"],
+#student-register textarea,
+#student-register button[type="submit"],
+#student-register input[type="password"],
+#student-register input[type=""],
+#student-register select[type="select"],
+#student-register input[type="number"] { /* Adicionando input type number para idade */
+    font: 400 12px/16px Inter, sans-serif;
+}
+
+
+/* Studante */
+#student-register {
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 0 auto;
+}
+
+#student-register h3 {
+    color: #000;
+    display: block;
+    font-size: 1.8em;
+    font-weight: 500;
+    padding: 12px 0;
+}
+
+#student-register h4 {
+    margin: 5px 0 15px;
+    display: block;
+    font-size: 13px;
+}
+
+#student-register fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+#student-register input[type="text"],
+#student-register input[type="password"],
+#student-register input[type=""],
+#student-register select[type="select"],
+#student-register input[type="email"],
+#student-register input[type="tel"],
+#student-register input[type="url"],
+#student-register textarea,
+#student-register input[type="number"] { /* Adicionando input type number para idade */
+    width: 100%;
+    border: 1px solid #CCC;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+
+#student-register input[type="text"]:hover,
+#student-register input[type="password"]:hover,
+#student-register input[type="email"]:hover,
+#student-register input[type="tel"]:hover,
+#student-register input[type="url"]:hover,
+#student-register textarea:hover,
+#student-register input[type="number"]:hover { /* Adicionando hover para input number */
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #AAA;
+}
+
+#student-register textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+
+#student-register button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #000;
+    font-family: Inter;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+#student-register button[type="submit"]:hover {
+    background: #09C;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#student-register button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#student-register input:focus,
+#student-register textarea:focus,
+#student-register input[type="number"]:focus { /* Adicionando focus para input number */
+    outline: 0;
+    border: 1px solid #999;
+}
+
 ::-webkit-input-placeholder {
  color:#888;
 }
@@ -510,3 +652,70 @@ html, body {
 }
 
 /* Final do Footer *\
+
+
+
+/* Modal */
+
+.add-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+.add-button i {
+    margin-right: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px 50px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content .container {
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 500px;
+}
