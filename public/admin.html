@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@TaskSubmit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="admin.css">
@@ -12,13 +13,11 @@
 
 <body id="body-pd">
 
-    <!-- NAVBAR -->
     <header class="header" id="header">
         <nav class="navbar">
             <div class="navbar-logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                    class="bi bi-bag-check-fill"
-                    viewBox="0 0 16 16">
+                    class="bi bi-bag-check-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z" />
                 </svg>
@@ -33,7 +32,6 @@
         </nav>
     </header>
 
-    <!-- SIDEBAR -->
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
             <div>
@@ -75,139 +73,215 @@
         </nav>
     </div>
 
-<!-- CONTEÚDO PRINCIPAL -->
-<div class="content" id="content">
-    <div class="main-content">
-        <div style="min-height: calc(100vh - 180px); padding: 20px;">
-            <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
-                <button class="add-button" data-modal-target="#modal-professor">
-                    <i class="fas fa-plus"></i> Adicionar Professor
-                </button>
-                <button class="add-button" data-modal-target="#modal-aluno" style="margin-left: 10px;">
-                    <i class="fas fa-plus"></i> Adicionar Aluno
-                </button>
-            </div>
-
-            <div class="modal" id="modal-professor">
-                <div class="modal-content">
-                    <span class="close-button">&times;</span>
-                    <div class="container">
-                        <form id="teacher-register" action="" method="post">
-                            <h3>Registro do Professor</h3>
-
-                            <fieldset>
-                                <input placeholder="Nome" type="text" id="teacher_name" name="teacher_name" tabindex="1" required autofocus>
-                            </fieldset>
-                            <fieldset>
-                                <select placeholder="Gênero" type="select" id="teacher_gender" name="teacher_gender" tabindex="2" required>
-                                    <option value="" disabled selected>Selecione seu gênero</option>
-                                    <option value="Masculino">Masculino</option>
-                                    <option value="Feminino">Feminino</option>
-                                    <option value="Outro">Outro</option>
-                                    <option value="Prefiro não dizer">Prefiro não dizer</option>
-                                </select>
-                            </fieldset>
-                            <fieldset>
-                                <select placeholder="Turno" type="select" id="teacher_turn" name="teacher_turn" tabindex="3" required>
-                                    <option value="" disabled selected>Selecione seu turno</option>
-                                    <option value="Manhã">Manhã</option>
-                                    <option value="Tarde">Tarde</option>
-                                    <option value="Noite">Noite</option>
-                                </select>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Email" type="email" id="teacher_email" name="teacher_email" tabindex="4" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Senha" type="password" id="teacher_password" name="teacher_password" tabindex="4" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="CPF" type="text" id="teacher_cpf" name="teacher_cpf" maxlength="14" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Máteria" type="text" id="teacher_subject" name="teacher_subject" required>
-                            </fieldset>
-                            <fieldset>
-                                <button name="submit" type="submit" id="teacher-submit" data-submit="...Sending">Cadastrar</button>
-                            </fieldset>
-                        </form>
+    <div class="content" id="content">
+        <div class="main-content">
+            <div style="min-height: calc(100vh - 180px); padding: 20px;">
+    
+                <h2>Lista de Professores</h2>
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Matéria</th>
+                            <th scope="col">Turno</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Professor Silva</td>
+                            <td>silva@email.com</td>
+                            <td>Matemática</td>
+                            <td>Manhã</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">Editar</button>
+                                <button class="btn btn-sm btn-danger">Remover</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Professora Oliveira</td>
+                            <td>oliveira@email.com</td>
+                            <td>Português</td>
+                            <td>Tarde</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">Editar</button>
+                                <button class="btn btn-sm btn-danger">Remover</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="display: flex; justify-content: flex-end; margin-top: 10px; margin-bottom: 50px;">
+                    <button class="add-button" data-modal-target="#modal-professor">
+                        <i class="fas fa-plus"></i> Adicionar Professor
+                    </button>
+                </div>
+    
+                <h2 class="mt-4">Lista de Alunos</h2>
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Curso</th>
+                            <th scope="col">Período</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>João Aluno</td>
+                            <td>joao.aluno@email.com</td>
+                            <td>Engenharia Civil</td>
+                            <td>5º</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">Editar</button>
+                                <button class="btn btn-sm btn-danger">Remover</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Maria Aluna</td>
+                            <td>maria.aluna@email.com</td>
+                            <td>Medicina</td>
+                            <td>2º</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">Editar</button>
+                                <button class="btn btn-sm btn-danger">Remover</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="display: flex; justify-content: flex-end; margin-top: 10px;">
+                    <button class="add-button" data-modal-target="#modal-aluno">
+                        <i class="fas fa-plus"></i> Adicionar Aluno
+                    </button>
+                </div>
+    
+                <div class="modal" id="modal-professor">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <div class="container">
+                            <form id="teacher-register" action="" method="post">
+                                <h3>Registro do Professor</h3>
+                                <fieldset>
+                                    <input placeholder="Nome" type="text" id="teacher_name" name="teacher_name" tabindex="1" required autofocus>
+                                </fieldset>
+                                <fieldset>
+                                    <select placeholder="Gênero" type="select" id="teacher_gender" name="teacher_gender" tabindex="2" required>
+                                        <option value="" disabled selected>Selecione seu gênero</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
+                                        <option value="Outro">Outro</option>
+                                        <option value="Prefiro não dizer">Prefiro não dizer</option>
+                                    </select>
+                                </fieldset>
+                                <fieldset>
+                                    <select placeholder="Turno" type="select" id="teacher_turn" name="teacher_turn" tabindex="3" required>
+                                        <option value="" disabled selected>Selecione seu turno</option>
+                                        <option value="Manhã">Manhã</option>
+                                        <option value="Tarde">Tarde</option>
+                                        <option value="Noite">Noite</option>
+                                    </select>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Email" type="email" id="teacher_email" name="teacher_email" tabindex="4" required>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Senha" type="password" id="teacher_password" name="teacher_password" tabindex="4" required>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="CPF" type="text" id="teacher_cpf" name="teacher_cpf" maxlength="14" required>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Máteria" type="text" id="teacher_subject" name="teacher_subject" required>
+                                </fieldset>
+                                <fieldset>
+                                    <button name="submit" type="submit" id="teacher-submit" data-submit="...Sending">Cadastrar</button>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="modal" id="modal-aluno">
-                <div class="modal-content">
-                    <span class="close-button">&times;</span>
-                    <div class="container">
-                        <form id="student-register" action="" method="post">
-                            <h3>Registro do Aluno</h3>
-
-                            <fieldset>
-                                <input placeholder="Nome" type="text" id="student_name" name="student_name" tabindex="1" required autofocus>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Email" type="email" id="student_email" name="student_email" tabindex="2" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Senha" type="password" id="student_password" name="student_password" tabindex="3" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Idade" type="number" id="student_age" name="student_age" tabindex="4" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Curso" type="text" id="student_course" name="student_course" tabindex="5" required>
-                            </fieldset>
-                            <fieldset>
-                                <select placeholder="Gênero" type="select" id="student_gender" name="student_gender" tabindex="6" required>
-                                    <option value="" disabled selected>Selecione seu gênero</option>
-                                    <option value="Masculino">Masculino</option>
-                                    <option value="Feminino">Feminino</option>
-                                    <option value="Outro">Outro</option>
-                                </select>
-                            </fieldset>
-                            <fieldset>
-                                <select placeholder="Turno" type="select" id="student_turn" name="student_turn" tabindex="7" required>
-                                    <option value="" disabled selected>Selecione seu turno</option>
-                                    <option value="Integral">Integral</option>
-                                    <option value="Noturno">Noturno</option>
-                                    <option value="Vespertino">Vespertino</option>
-                                </select>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Período" type="text" id="student_period" name="student_period" tabindex="8" required>
-                            </fieldset>
-                            <fieldset>
-                                <button name="submit" type="submit" id="student-submit" data-submit="...Sending">Cadastrar</button>
-                            </fieldset>
-                        </form>
+    
+                <div class="modal" id="modal-aluno">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <div class="container">
+                            <form id="student-register" action="" method="post">
+                                <h3>Registro do Aluno</h3>
+                                <fieldset>
+                                    <input placeholder="Nome" type="text" id="student_name" name="student_name" tabindex="1" required autofocus>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Email" type="email" id="student_email" name="student_email" tabindex="2" required>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Senha" type="password" id="student_password" name="student_password" tabindex="3" required>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Idade" type="number" id="student_age" name="student_age" tabindex="4" required>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Curso" type="text" id="student_course" name="student_course" tabindex="5" required>
+                                </fieldset>
+                                <fieldset>
+                                    <select placeholder="Gênero" type="select" id="student_gender" name="student_gender" tabindex="6" required>
+                                        <option value="" disabled selected>Selecione seu gênero</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
+                                        <option value="Outro">Outro</option>
+                                    </select>
+                                </fieldset>
+                                <fieldset>
+                                    <select placeholder="Turno" type="select" id="student_turn" name="student_turn" tabindex="7" required>
+                                        <option value="" disabled selected>Selecione seu turno</option>
+                                        <option value="Integral">Integral</option>
+                                        <option value="Noturno">Noturno</option>
+                                        <option value="Vespertino">Vespertino</option>
+                                    </select>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Período" type="text" id="student_period" name="student_period" tabindex="8" required>
+                                </fieldset>
+                                <fieldset>
+                                    <button name="submit" type="submit" id="student-submit" data-submit="...Sending">Cadastrar</button>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
                 </div>
+    
             </div>
-
-            </div>
-    </div>
-</div>
-
-<!-- FOOTER NOVO -->
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-left">
-            <h3>@TaskSubmit</h3>
-            <p>Transformando o Ensino com estilo.</p>
-        </div>
-        <div class="footer-right">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-</footer>
 
-<!-- SCRIPTS -->
-<script src="sidebar.js"></script>
-<script src="admin.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>@TaskSubmit</h3>
+                <p>Transformando o Ensino com estilo.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="sidebar.js"></script>
+    <script src="admin.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 

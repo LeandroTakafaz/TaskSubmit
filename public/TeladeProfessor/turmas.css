@@ -71,7 +71,6 @@
     color: #333;
 }
 
-/* Ações da Turma */
 .turma-actions {
     display: flex;
     gap: 10px;
@@ -94,14 +93,13 @@
 }
 
 .turma-actions button:last-child {
-    background-color: #28a745; /* Cor para o botão "Ver Alunos" */
+    background-color: #28a745;
 }
 
 .turma-actions button:last-child:hover {
     background-color: #1e7e34;
 }
 
-/* Botão Adicionar Turma */
 .adicionar-turma {
     margin-top: 20px;
     text-align: center;

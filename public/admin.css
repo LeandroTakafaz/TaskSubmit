@@ -229,7 +229,6 @@ body {
     color: white;
 }
 
-/* Quando a sidebar estiver recolhida */
 .l-navbar.collapsed .collapse-icon {
     transform: rotate(180deg);
 }
@@ -440,7 +439,7 @@ fieldset {
 #student-register input[type="password"],
 #student-register input[type=""],
 #student-register select[type="select"],
-#student-register input[type="number"] { /* Adicionando input type number para idade */
+#student-register input[type="number"] {
     font: 400 12px/16px Inter, sans-serif;
 }
 
@@ -482,7 +481,7 @@ fieldset {
 #student-register input[type="tel"],
 #student-register input[type="url"],
 #student-register textarea,
-#student-register input[type="number"] { /* Adicionando input type number para idade */
+#student-register input[type="number"] {
     width: 100%;
     border: 1px solid #CCC;
     background: #FFF;
@@ -496,7 +495,7 @@ fieldset {
 #student-register input[type="tel"]:hover,
 #student-register input[type="url"]:hover,
 #student-register textarea:hover,
-#student-register input[type="number"]:hover { /* Adicionando hover para input number */
+#student-register input[type="number"]:hover {
     -webkit-transition: border-color 0.3s ease-in-out;
     -moz-transition: border-color 0.3s ease-in-out;
     transition: border-color 0.3s ease-in-out;
@@ -534,7 +533,7 @@ fieldset {
 
 #student-register input:focus,
 #student-register textarea:focus,
-#student-register input[type="number"]:focus { /* Adicionando focus para input number */
+#student-register input[type="number"]:focus {
     outline: 0;
     border: 1px solid #999;
 }
@@ -553,7 +552,7 @@ fieldset {
 }
 
 :root {
-    --sidebar-width: 250px; /* ou a largura real da sua sidebar */
+    --sidebar-width: 250px;
     --header-height: 80px;
 }
 
@@ -562,7 +561,7 @@ fieldset {
     padding-top: var(--header-height);
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* ou center se quiser centralizado na vertical */
+    align-items: flex-start;
     min-height: calc(100vh - var(--header-height));
 }
 
@@ -577,7 +576,6 @@ fieldset {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Estilo do container do formulário */
 .container {
     width: 100%;
     max-width: 600px;

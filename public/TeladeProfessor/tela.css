@@ -152,7 +152,6 @@ body {
     font-size: 1.25rem;
 }
 
-/* Active link */
 .active {
     color: #fff;
     background-color: rgba(255,255,255,0.1);
@@ -218,7 +217,6 @@ body {
     color: white;
 }
 
-/* Quando a sidebar estiver recolhida */
 .l-navbar.collapsed .collapse-icon {
     transform: rotate(180deg);
 }
@@ -399,7 +397,7 @@ fieldset {
 }
 
 :root {
-    --sidebar-width: 250px; /* ou a largura real da sua sidebar */
+    --sidebar-width: 250px;
     --header-height: 80px;
 }
 
@@ -408,22 +406,10 @@ fieldset {
     padding-top: var(--header-height);
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* ou center se quiser centralizado na vertical */
+    align-items: flex-start;
     min-height: calc(100vh - var(--header-height));
 }
 
-
-
-.container {
-    width: 100%;
-    max-width: 600px;
-    padding: 30px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Estilo do container do formulário */
 .container {
     width: 100%;
     max-width: 600px;
@@ -456,7 +442,6 @@ html, body {
     flex: 1;
 }
 
-/* Estilo do Footer */
 .footer {
     background-color: #111;
     color: #fff;
