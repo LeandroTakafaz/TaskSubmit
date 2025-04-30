@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@TaskSubmit</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Horário de Aula - Portal do Professor</title>
+    <link rel="stylesheet" href="horario.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="tela.css">
 </head>
 
 <body id="body-pd">
@@ -17,7 +16,8 @@
         <nav class="navbar">
             <div class="navbar-logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                    class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+                    class="bi bi-bag-check-fill"
+                    viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z" />
                 </svg>
@@ -74,55 +74,79 @@
         </nav>
     </div>
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <div class="content" id="content">
-        <div class="main-content">
-            <!-- Conteúdo principal vai aqui -->
-            <div style="min-height: calc(100vh - 180px); padding: 20px;">
-                    <div class="aviso-aluno">
-                        <strong><i class="fas fa-graduation-cap"></i> Bem-vindos, Professores(a)! 🎓</strong><br>
-                        É um prazer tê-los em nosso portal acadêmico! Aqui, vocês encontrarão todas as ferramentas e informações
-                        necessárias para acompanhar o desempenho dos alunos e otimizar sua jornada de ensino. Aproveitem todos os
-                        recursos disponíveis e tenham uma excelente experiência! 🚀
-                    </div>
-                    <div class="info-container">
-                        <a href="https://www.youtube.com/watch?v=lL6qlmeaoV4&t=1s" class="info-box"
-                            style="text-decoration: none; color: inherit;">
-                            <img src="./imag/portal-fametro.jpg" alt="Aulas Online" class="info-img">
-                            <p><strong>Apresentação Portal dos Professores</strong><br>Assista o vídeo da apresentação do portal dos
-                                Professores</p>
-                        </a>
-                        <a href="https://www.facebook.com/reel/1404433737189111" class="info-box"
-                            style="text-decoration: none; color: inherit;">
-                            <img src="./imag/fullsize_2015_05_19_22_Logo-LV-104588_1898_032542002_967398872.jpg"
-                                alt="Suporte Acadêmico" class="info-img">
-                            <p><strong>Podcast Papo de Professor</strong><br>Podcast dos Professores | Dicas | Dúvidas</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+<!-- CONTEÚDO PRINCIPAL -->
+<div class="content" id="content">
+    
+    <div class="aviso-aluno">
+        <strong><i class="fas fa-calendar-alt"></i> Confira abaixo os horários de suas Aulas:</strong><br>
+        Planeje suas aulas e atividades com antecedência! 📅
+    </div>
+    
+    <div class="info-container">
+        <div class="info-box">
+
+            <p><strong>Horário Semanal:</strong></p>
+
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Dia da Semana</th>
+                        <th>Horário</th>
+                        <th>Disciplina</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Segunda-feira</td>
+                        <td>18:30 - 21:30</td>
+                        <td>Sistema da Informação</td>
+                    </tr>
+                    <tr>
+                        <td>Terça-feira</td>
+                        <td>18:30 - 21:30</td>
+                        <td>ADS</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta-feira</td>
+                        <td>18:30 - 21:30</td>
+                        <td>Engenharia de Software</td>
+                    </tr>
+                    <tr>
+                        <td>Quinta-feira</td>
+                        <td>18:30 - 21:30</td>
+                        <td>ADS</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta-feira</td>
+                        <td>18:30 - 21:30</td>
+                        <td>Sistema da Informação</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
 
-    <!-- FOOTER NOVO -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-left">
-                <h3>@TaskSubmit</h3>
-                <p>Transformando o Ensino com estilo.</p>
-            </div>
-            <div class="footer-right">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
+<!-- FOOTER NOVO -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <h3>@TaskSubmit</h3>
+            <p>Transformando o Ensino com estilo.</p>
         </div>
-    </footer>
+        <div class="footer-right">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
 
-    <!-- SCRIPTS -->
-    <script src="/public/admin.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!-- SCRIPTS -->
+<script src="/public/admin.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>

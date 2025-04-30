@@ -60,19 +60,22 @@ body {
     transform: scaleX(1);
 }
 
+.navbar-link:hover {
+    color: #ffffff;
+}
+
 .navbar-link.active {
     font-weight: bold;
-    color: #007bff;
+    color: #ca1717;
 }
 
 /* CONTEÚDO */
 .content {
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
 }
 
 .main-content {
-    margin-left: 250px;
     padding: 20px;
     width: calc(100% - 250px);
 }
@@ -231,7 +234,6 @@ body {
     color: white;
 }
 
-/* Quando a sidebar estiver recolhida */
 .l-navbar.collapsed .collapse-icon {
     transform: rotate(180deg);
 }
@@ -298,7 +300,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
-    font-smoothing: antialiased;
+    -font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
 
@@ -421,6 +423,7 @@ fieldset {
     border: 1px solid #999;
 }
 
+
 ::-webkit-input-placeholder {
     color: #888;
 }
@@ -464,7 +467,6 @@ fieldset {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo do container do formulário */
 .container {
     width: 100%;
     max-width: 600px;
@@ -540,3 +542,70 @@ body {
 }
 
 /* Final do Footer *\
+
+
+
+/* Modal */
+
+.add-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+.add-button i {
+    margin-right: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px 50px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content .container {
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 500px;
+}
