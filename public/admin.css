@@ -60,9 +60,13 @@ body {
     transform: scaleX(1);
 }
 
+.navbar-link:hover {
+    color: #ffffff;
+}
+
 .navbar-link.active {
     font-weight: bold;
-    color: #007bff;
+    color: #ca1717;
 }
 
 /* CONTEÚDO */
