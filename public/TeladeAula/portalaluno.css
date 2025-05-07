@@ -1,3 +1,5 @@
+PORTAL DO ALUNO CSS
+
        * {
             margin: 0;
             padding: 0;
@@ -245,5 +247,70 @@
     width: 100px;
     height: auto;
     margin-bottom: 10px;
+}
+
+/* Tela de opção no CENTRAL DO ALUNO*/
+
+.submenu {
+    display: none;
+    padding-left: 20px;
+    background-color: #f0f0f0;
+}
+
+.submenu-item {
+    padding: 8px 0;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.submenu-item:hover {
+    background-color: #ddd;
+}
+
+.submenu-icon {
+    float: right;
+    margin-right: 10px;
+}
+
+.submenu-item i {
+    margin-right: 8px;
+    width: 20px;
+}
+
+/* Cores dos simbolos*/
+
+.menu-item,
+.submenu-item {
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.menu-item i,
+.submenu-item i {
+    margin-right: 10px;
+    color: black;
+    width: 20px;
+}
+
+.submenu {
+    display: none;
+    background-color: #2079a2; /* mesmo fundo da sidebar */
+    padding-left: 20px;
+}
+
+.submenu-item:hover {
+    background-color: #7d9ba7; /* efeito hover sutil */
+}
+
+.submenu-icon {
+    margin-left: auto;
+    color: black;
 }
 

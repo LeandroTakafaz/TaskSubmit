@@ -1,3 +1,5 @@
+Portal do Aluno HTML 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -5,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal do Aluno</title>
-    <link rel="stylesheet" href="./tela.css">
+    <link rel="stylesheet" href="./portalaluno.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
@@ -38,22 +40,24 @@
         <div class="menu-item" onclick="redirecionarGradeCurricular()">
             <i class="fas fa-book"></i> Grade Curricular
         </div>
-        <div class="menu-item" onclick="redirecionarCentralAluno()">
-            <i class="fas fa-user-graduate"></i> Central do Aluno
+        <div class="menu-item" onclick="toggleSubmenu()">
+            <i class="fas fa-user-graduate"></i> Central do Aluno <i class="fas fa-chevron-down submenu-icon"></i>
         </div>
+        <div class="submenu" id="submenu-central-aluno">
+            <div class="submenu-item" onclick="redirecionarFinanceiro()">
+                <i class="fas fa-dollar-sign"></i> Financeiro
+            </div>
+            <div class="submenu-item" onclick="redirecionarConsultaNota()">
+                <i class="fas fa-file-alt"></i> Consulta de Nota
+            </div>
+        </div>
+           
         <div class="menu-item"><i class="fas fa-folder"></i> Arquivo</div>
-        <div class="menu-item"><i class="fas fa-dollar-sign"></i> Financeiro</div>
         <div class="menu-item"><i class="fas fa-comments"></i> ChatBox</div>
     </div>
 
     <div class="main-content">
-        <div class="header">PORTAL DO ALUNO
-            <div class="header-icons">
-                <span><i class="fas fa-cog"></i></span> <!-- Configurações -->
-                <span><i class="fas fa-bell"></i></span> <!-- Notificações -->
-                <span><i class="fas fa-door-open"></i></span> <!-- Sair -->
-            </div>
-        </div>
+        <div class="header">PORTAL DO ALUNO</div>
         <!-- AVISO DE BOAS-VINDAS PARA OS ALUNOS -->
         <div class="aviso-aluno">
             <strong><i class="fas fa-graduation-cap"></i> Bem-vindos, novos alunos! 🎓</strong><br>
@@ -92,18 +96,27 @@
     </footer>
 
     <!-- Funções JavaScript -->
-    <script>
-        function redirecionarHorarioAula() {
-            window.location.href = "Horário-de-Aula.html"; // Redireciona para a página correta
-        }
+   <script>
+    function redirecionarHorarioAula() {
+        window.location.href = "Horário-de-Aula.html";
+    }
 
-        function redirecionarGradeCurricular() {
-            window.location.href = "Grade-Curricular.html"; // Redireciona para a página da grade curricular
-        }
-        function redirecionarCentralAluno() {
-            window.location.href = "Central-de-aluno.html"; // Redireciona para a página da grade curricular
-        }
-    </script>
+    function redirecionarGradeCurricular() {
+        window.location.href = "Grade-Curricular.html";
+    }
+
+    function toggleSubmenu() {
+        const submenu = document.getElementById('submenu-central-aluno');
+        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function redirecionarFinanceiro() {
+        window.location.href = "Financeiro.html"; // Atualize com o nome real da página
+    }
+
+    function redirecionarConsultaNota() {
+        window.location.href = "Consulta-de-Nota.html"; // Atualize com o nome real da página
+    }
+</script>
 </body>
-
 </html>

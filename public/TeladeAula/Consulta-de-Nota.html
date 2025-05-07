@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Nota</title>
+    <link rel="stylesheet" href="./Consulta-de-Nota.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+  
+<body>
+
+    <div class="header" style="justify-content: space-between;">
+        <div><i class="fas fa-file-alt"></i> Consulta de Nota</div>
+        <button onclick="voltarAoPortal()" style="background-color: #fff; color: #2079a2; padding: 6px 12px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </button>
+    </div>
+
+    <div class="container">
+
+        <div class="alert">
+            <strong>Aviso:</strong> Selecione a disciplina para consultar as notas correspondentes por professor e período.
+        </div>
+
+        <label for="disciplinaSelect">Filtrar por Disciplina:</label>
+        <select id="disciplinaSelect" onchange="filtrarNotas()">
+            <option value="">Selecione uma disciplina</option>
+            <option value="Algoritmos">Algoritmos</option>
+            <option value="Banco de Dados">Banco de Dados</option>
+            <option value="Engenharia de Software">Engenharia de Software</option>
+            <option value="Redes de Computadores">Redes de Computadores</option>
+            <option value="Estrutura de Dados">Estrutura de Dados</option>
+        </select>
+
+        <table id="tabelaNotas">
+            <thead>
+                <tr>
+                    <th>Período</th>
+                    <th>Disciplina</th>
+                    <th>Professor</th>
+                    <th>Nota</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabelaNotas">
+                <!-- Conteúdo dinâmico -->
+            </tbody>
+        </table>
+
+    </div>
+
+    <script>
+        const dadosNotas = [
+            { periodo: '1º', disciplina: 'Algoritmos', professor: 'Prof. Ana', nota: 8.5 },
+            { periodo: '2º', disciplina: 'Banco de Dados', professor: 'Prof. João', nota: 7.8 },
+            { periodo: '3º', disciplina: 'Engenharia de Software', professor: 'Prof. Carla', nota: 9.2 },
+            { periodo: '4º', disciplina: 'Redes de Computadores', professor: 'Prof. Marcos', nota: 7.5 },
+            { periodo: '5º', disciplina: 'Estrutura de Dados', professor: 'Prof. André', nota: 8.0 },
+            { periodo: '6º', disciplina: 'Engenharia de Software', professor: 'Prof. Carla', nota: 8.7 },
+            { periodo: '7º', disciplina: 'Banco de Dados', professor: 'Prof. João', nota: 9.0 }
+        ];
+
+        function filtrarNotas() {
+            const filtro = document.getElementById('disciplinaSelect').value;
+            const corpo = document.getElementById('corpoTabelaNotas');
+            corpo.innerHTML = '';
+
+            const filtrados = dadosNotas.filter(n => n.disciplina === filtro);
+
+            if (filtrados.length === 0 && filtro !== "") {
+                corpo.innerHTML = `<tr><td colspan="4">Nenhuma nota encontrada para a disciplina selecionada.</td></tr>`;
+                return;
+            }
+
+            filtrados.forEach(nota => {
+                corpo.innerHTML += `
+                    <tr>
+                        <td>${nota.periodo}</td>
+                        <td>${nota.disciplina}</td>
+                        <td>${nota.professor}</td>
+                        <td>${nota.nota}</td>
+                    </tr>
+                `;
+            });
+        }
+
+        function voltarAoPortal() {
+        window.location.href = "portalaluno.html";
+    }
+    </script>
+
+</body>
+</html>
