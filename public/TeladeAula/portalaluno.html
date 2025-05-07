@@ -1,5 +1,3 @@
-Portal do Aluno HTML 
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -44,8 +42,10 @@ Portal do Aluno HTML
             </div>
         </div>
            
-        <div class="menu-item"><i class="fas fa-folder"></i> Arquivo</div>
-        <div class="menu-item"><i class="fas fa-comments"></i> ChatBox</div>
+        <div class="menu-item" onclick="redirecionarArquivo()">
+            <i class="fas fa-folder"></i> Arquivo
+        </div>
+       <!--<div class="menu-item"><i class="fas fa-comments"></i> ChatBox</div>--> 
     </div>
 
     <div class="main-content">
@@ -108,6 +108,10 @@ Portal do Aluno HTML
 
     function redirecionarConsultaNota() {
         window.location.href = "Consulta-de-Nota.html"; // Atualize com o nome real da página
+    }
+
+    function redirecionarArquivo() {
+        window.location.href = "Pasta.html"; // Página de destino
     }
 </script>
 </body>
