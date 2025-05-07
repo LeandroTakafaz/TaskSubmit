@@ -1,0 +1,184 @@
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ccc;
+}
+
+.sidebar {
+width: 260px;
+background-color: #157399;
+color: #fff;
+height: 100vh;
+padding: 20px;
+box-sizing: border-box;
+float: left;
+}
+
+.perfil {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.perfil img {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+background-color: #fff;
+padding: 4px;
+}
+
+.nome-aluno {
+font-weight: bold;
+margin-top: 10px;
+font-size: 16px;
+}
+
+.codigo-aluno {
+font-size: 14px;
+color: #dfefff;
+}
+
+.busca input {
+width: 100%;
+padding: 10px 12px;
+margin: 20px 0;
+border: none;
+border-radius: 20px;
+font-size: 14px;
+box-sizing: border-box;
+}
+
+.sidebar nav ul {
+list-style: none;
+padding: 0;
+}
+
+.sidebar nav ul li {
+margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+display: block;
+color: #fff;
+text-decoration: none;
+background-color: #106a8a;
+padding: 12px 15px;
+border-radius: 5px;
+font-weight: bold;
+font-size: 14px;
+transition: background 0.3s;
+}
+
+.sidebar nav ul li a i {
+margin-right: 8px;
+}
+
+.sidebar nav ul li a:hover {
+background-color: #0e5b76;
+}
+
+
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+.header {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background-color: #007b9e;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.aviso-aluno {
+    background-color: #e1f3fd;
+    padding: 15px;
+    border-left: 5px solid #007b9e;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.financeiro-container {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.financeiro-container h2 {
+    margin-bottom: 20px;
+    color: #007b9e;
+}
+
+.tabela-financeira {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.tabela-financeira th,
+.tabela-financeira td {
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    word-wrap: break-word;
+}
+
+.tabela-financeira th {
+    background-color: #007b9e;
+    color: #fff;
+}
+
+.tabela-financeira td:first-child,
+.tabela-financeira td:nth-child(2),
+.tabela-financeira td:nth-child(3),
+.tabela-financeira td:nth-child(4),
+.tabela-financeira td:nth-child(5) {
+    width: 20%;
+}
+
+.status.pago {
+    color: green;
+    font-weight: bold;
+}
+
+.status.pendente {
+    color: red;
+    font-weight: bold;
+}
+
+.botao-boleto {
+    background-color: #007b9e;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.botao-boleto:hover {
+    background-color: #005f7f;
+}
+.submenu-item {
+    padding: 8px 0;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s;
+}
+.btn-voltar {
+    display: inline-block;
+    background-color: #007b9e;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #005f7d;
+}

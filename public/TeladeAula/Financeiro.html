@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financeiro - Portal do Aluno</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./Financeiro.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div class="perfil">
+        <img src="/public/TeladeAula/imag/194931.png" alt="Foto do Aluno">
+        <p class="nome-aluno">Alex Ranysson da Silva Soares</p>
+        <p class="codigo-aluno">Código: <strong>224565</strong></p>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="#"><i class="fas fa-dollar-sign"></i> Financeiro</a></li>
+           
+
+
+            <!-- Botão Voltar -->
+        <div style="margin-top: 20px;">
+            <a href="portalaluno.html" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar</a>
+        </div>
+ 
+        </ul>
+    </nav>
+</div>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="main-content">
+        <div class="header">Área Financeira</div>
+
+        <div class="aviso-aluno">
+            <strong><i class="fas fa-info-circle"></i> Olá, Alex!</strong><br>
+            Aqui você encontra os detalhes sobre sua situação financeira. Mantenha seus pagamentos em dia para evitar bloqueios acadêmicos.
+        </div>
+
+        <div class="financeiro-container">
+            <h2><i class="fas fa-file-invoice-dollar"></i> Boletos e Pagamentos</h2>
+
+            <table class="tabela-financeira">
+                <thead>
+                    <tr>
+                        <th>Referência</th>
+                        <th>Vencimento</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Janeiro/2025</td>
+                        <td>20/01/2025</td>
+                        <td>R$ 412,00</td>
+                        <td><span class="status pago">Pago</span></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Fevereiro/2025</td>
+                        <td>20/02/2025</td>
+                        <td>R$ 412,00</td>
+                        <td><span class="status pago">Pago</span></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Março/2025</td>
+                        <td>20/03/2025</td>
+                        <td>R$ 412,00</td>
+                        <td><span class="status pago">Pago</span></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Abril/2025</td>
+                        <td>20/04/2025</td>
+                        <td>R$ 412,00</td>
+                        <td><span class="status pago">Pago</span></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Maio/2025</td>
+                        <td>20/05/2025</td>
+                        <td>R$ 412,00</td>
+                        <td><span class="status pendente">Pendente</span></td>
+                        <td><a href="/public/TeladeAula/pdf/relatorio.pdf" target="_blank" class="botao-boleto"><i class="fas fa-file-pdf"></i> Emitir Boleto</a></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
