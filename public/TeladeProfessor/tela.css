@@ -124,6 +124,7 @@ body {
 
 .nav_logo {
     margin-bottom: 2rem;
+    
 }
 
 .nav_logo-icon {
@@ -265,8 +266,69 @@ body {
     flex: 1;
     padding-bottom: 20px;
 }
-
 /* Final da Sidebar */
+
+
+
+/* Centralização do icone Bem-vindos Professores(a)! */
+.aviso-aluno {
+    background-color: #e3f2fd;
+    border-left: 5px solid #2196f3;
+    padding: 20px;
+    margin: 20px;
+    font-size: 18px;
+    color: #333;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.aviso-aluno strong {
+    color: #0d47a1;
+}
+/*A final Centralização do icone Bem-vindos Professores(a)! */
+
+
+
+         /* Contêiner das novas informações */
+         .info-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+            /* Caixa individual de cada informação */
+        .info-box {
+            width: 45%;
+            background-color: #e0e5eb;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(140, 41, 41, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+            /* Efeito de animação ao passar o mouse */
+        .info-box:hover {
+            transform: scale(1.05);
+            border: 1px solid rgb(96, 21, 166);
+        }
+
+            /* Estilização das imagens animadas */
+        .info-img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -422,64 +484,58 @@ fieldset {
  /* Final do Conteúdo Principal */
 
 
-
- /* Inicio do Footer */
-
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.main-content {
-    flex: 1;
-}
-
+/* Rodapé fixado no final */
 .footer {
-    background-color: #111;
-    color: #fff;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-container {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.footer-left h3 {
-    margin: 0;
-    font-size: 20px;
-}
-
-.footer-left p {
-    margin: 5px 0 0;
+    background-color: #101417;
+    color: white;
+    padding: 15px;
+    text-align: center;
     font-size: 14px;
-    color: #ccc;
 }
 
-.footer-right a {
+.footer p {
+    margin: 4px 0;
+    display: inline-block;
+}
+
+.footer a {
+    color: #5753d9;
+    text-decoration: none;
+    margin: 0 3px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-icons {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.footer .social-icons a {
+    color: white;
+    margin: 0 8px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.footer .social-icons a:hover {
+    color: #430ea0;
+}
+/*Texto de baixo da imagem*/
+.turma-info {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
     color: #fff;
-    margin-left: 15px;
-    font-size: 20px;
-    transition: color 0.3s;
 }
 
-.footer-right a:hover {
-    color: #00aaff;
-}
+/* Estilização das imagens animadas */
 
-/* Final do Footer *\
+.info-img {
+width: 100px;
+height: auto;
+margin-bottom: 10px;
+}
