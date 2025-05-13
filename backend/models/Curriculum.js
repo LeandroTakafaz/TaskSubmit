@@ -1,4 +1,3 @@
-// models/Curriculum.js
 const mongoose = require("mongoose");
 
 const CurriculumSchema = new mongoose.Schema({

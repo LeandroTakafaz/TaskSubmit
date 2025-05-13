@@ -6,6 +6,7 @@ const config = require("./config.json");
 const studentRoutes = require("./routes/studentRoutes");
 const professorRoutes = require("./routes/professorRoutes")
 const authRoutes = require("./routes/authRoutes");
+const curriculumRoutes = require("./routes/curriculumRoutes");
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.get("/", (req, res) => {
 app.use("/api/student", studentRoutes);
 app.use("/api/professor", professorRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/curriculum", curriculumRoutes);
 
 const PORT = config.port || 3000;
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`))
