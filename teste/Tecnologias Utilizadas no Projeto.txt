@@ -1,0 +1,35 @@
+Tecnologias Utilizadas no Projeto
+
+Passo 1: Baixar o Node.js (nodejs.org)
+Passo 2: Instalar Nodemon (npm install -g nodemon)
+Passo 3: Instalar TypeScript (npm install -g typescript)
+Passo 4: Testar a instalação do TS (tsc -v)
+Passo 5: Instalar SCSS (npm install -g sass)
+Passo 6: Instalar Express.js (npm install -g express)
+Passo 7: Instalar o Git (https://git-scm.com/downloads)
+
+--------------------------------------------------------------------------------
+
+Repositório do Github
+
+Passo 1: Clonar Repositório para uso Local ( git clone https://github.com/LeandroTakafaz/TaskSubmit.git )
+Passo 2: Buscar a pasta do Arquivo ( cd TaskSubmit )
+Passo 3: Configurar nome do Perfil do GitHub ( git config --global user.name "Seu Nome" )
+Passo 4: Configurar e-mail do perfil do Github ( git config --global user.email "seuemail@email.com" )
+
+Subir Arquivos para o GitHub
+
+Passo 1: git add .
+Passo 2: git commit -m "Informação do Commit"
+Passo 3: git push origin main
+
+
+---------------------------------------------------------------------------------
+
+Ferramentas para Utilizar CSS no Site
+
+10015 CSS
+CSS Scan
+CCSS Buttons
+CSS Glow Generator
+Shadows by Brummm
