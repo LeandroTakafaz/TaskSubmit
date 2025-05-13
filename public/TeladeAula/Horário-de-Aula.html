@@ -1,83 +1,168 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horário de Aula - Portal do Professor</title>
-    <link rel="stylesheet" href="./horario-aula.css">
+    <title>@TaskSubmit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="horario-aula.css">
 </head>
 
-<body>
-    <div class="sidebar">
-        <img src="./imag/194931.png" alt="User Icon" class="user-icon">
-        <!-- Nome e código da turma -->
-        <div class="turma-info">
-            <strong>Alex Ranysson da Silva Soares</strong><br>
-            <strong>Código: 224565</strong>
-        </div>
-        <div class="menu">
-            <div class="menu-item"><i class="fas fa-calendar-alt"></i> Horário de Aula</div>
-        </div>
+<body id="body-pd">
 
-        <div class="menu-item sair" onclick="sairDoSistema()">
-            <i class="fas fa-sign-out-alt"></i> Sair
-        </div>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z" />
+                </svg>
+            </div>
+            <div class="navbar-menu">
+                <a href="#" class="navbar-link">TaskSubmit</a>
+                <a href="#" class="navbar-link">Finanças</a>
+                <a href="#" class="navbar-link">Atividades</a>
+                <a href="#" class="navbar-link">Rematrícula</a>
+                <a href="#" class="navbar-link">Suporte</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <div class="collapse-wrapper">
+                    <a href="#" class="nav_collapse" id="sidebarCollapse">
+                        <div class="collapse-circle">
+                            <i class='bi bi-chevron-double-left collapse-icon'></i>
+                        </div>
+                    </a>
+                </div>
+                <a href="#" class="nav_logo">
+                    <i class='bi bi-grid-fill nav_logo-icon'></i>
+                    <span class="nav_logo-name">Menu</span>
+                </a>
+
+                <div class="nav_list">
+                    <a href="#" class="nav_link active">
+                        <i class='bi bi-house-fill nav_icon'></i>
+                        <span class="nav_name">Dashboard</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-card-checklist nav_icon'></i>
+                        <span class="nav_name">Atividades</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-bar-chart-fill nav_icon'></i>
+                        <span class="nav_name">Desempenho</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-people-fill nav_icon'></i>
+                        <span class="nav_name">Grade Curricular</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-gear-fill nav_icon'></i>
+                        <span class="nav_name">Configurações</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
     </div>
 
-    <div class="main-content">
-        <div class="header">Horário de Aula</div>
-        <div class="aviso-aluno">
-            <strong><i class="fas fa-info-circle"></i> Consulte seu horário!</strong><br>
-            Aqui você pode visualizar os horários das suas aulas e se organizar melhor para o dia a dia letivo.
-        </div>
-        <table>
+    <div class="content" id="content">
+        <div class="main-content">
+            <div style="min-height: calc(100vh - 180px); padding: 20px;">
+    
+                <h2>Horario de Aula</h2>
+                
+      <div class="table-responsive mt-4">
+    <table class="table table-bordered table-striped">
+        <thead class="">
             <tr>
-                <th>Dia</th>
                 <th>Horário</th>
-                <th>Disciplina</th>
-                <th>Sala</th>
+                <th>Turma</th>
+                <th>Matéria</th>
+                <th>Dia da Semana</th>
+                <th>Periodo</th>
             </tr>
+        </thead>
+        <tbody>
             <tr>
+                <td>18:30 - 21:30</td>
+                <td>Sistema de Informação</td>
+                <td>Sistemas Distribuídos</td>
                 <td>Segunda-feira</td>
-                <td>18:30 - 21:30</td>
-                <td>ADS</td>
-                <td>Sala 39</td>
+                <td>7º Periodo</td>
             </tr>
             <tr>
+                <td>18:30 - 21:30</td>
+                <td>Sistema de Informação</td>
+                <td>Engenharia de Software</td>
                 <td>Terça-feira</td>
-                <td>18:30 - 21:30</td>
-                <td>SI</td>
-                <td>Sala 38</td>
+                <td>7º Periodo</td>
             </tr>
             <tr>
+                <td>18:30 - 21:30</td>
+                <td>Sistema de Informação</td>
+                <td>Ciência da Computação</td>
                 <td>Quarta-feira</td>
-                <td>18:30 - 21:30</td>
-                <td>ENG</td>
-                <td>Sala 28</td>
+                <td>7º Periodo</td>
             </tr>
             <tr>
+                <td>18:30 - 21:30</td>
+                <td>Sistema de Informação</td>
+                <td>Redes de Computadores</td>
                 <td>Quinta-feira</td>
-                <td>18:30 - 21:30</td>
-                <td>SI</td>
-                <td>Sala 45</td>
+                <td>7º Periodo</td>
             </tr>
             <tr>
-                <td>Sexta-feira</td>
                 <td>18:30 - 21:30</td>
-                <td>SI</td>
-                <td>Sala 38</td>
+                <td>Sistema de Informação</td>
+                <td>Tópicos Especiais</td>
+                <td>Sexta-feira</td>
+                <td>7º Periodo</td>
             </tr>
-        </table>
+        </tbody>
+    </table>
+</div>
+
+                               
+                            
+                            </form>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
     </div>
-    <script>
-        function sairDoSistema() {
-            if (confirm("Tem certeza que deseja sair?")) {
-                window.location.href = "portalaluno.html"; // Altere para a URL correta da página inicial
-            }
-        }
-    </script>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>@TaskSubmit</h3>
+                <p>Transformando o Ensino com estilo.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="sidebar.js"></script>
+    <script src="horario-aula.css"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
