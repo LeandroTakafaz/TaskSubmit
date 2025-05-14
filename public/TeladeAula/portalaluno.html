@@ -1,118 +1,305 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal do Aluno</title>
+    <title>@TaskSubmit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="./portalaluno.css">
+    <link rel="stylesheet" href="portalaluno.css">
 </head>
 
-<body>
-    <div class="sidebar">
-        <img src="./imag/194931.png" alt="User Icon">
+<body id="body-pd">
 
-        <!-- Nome e código da turma -->
-        <div class="turma-info">
-            <strong>Alex Ranysson da Silva Soares</strong><br>
-            <strong>Código: 224565</strong>
-        </div>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z" />
+                </svg>
+            </div>
+            <div class="navbar-menu">
+                <a href="#" class="navbar-link">TaskSubmit</a>
+                <a href="#" class="navbar-link">Finanças</a>
+                <a href="#" class="navbar-link">Atividades</a>
+                <a href="#" class="navbar-link">Rematrícula</a>
+                <a href="#" class="navbar-link">Suporte</a>
+            </div>
+        </nav>
+    </header>
 
-        <!-- Barra de pesquisa com ícone -->
-        <div class="search-bar">
-            <span class="search-icon"><i class="fas fa-search"></i></span>
-            <input type="text" placeholder="Pesquisar...">
-        </div>
-        <div class="menu-item" onclick="redirecionarHorarioAula()">
-            <i class="fas fa-calendar-alt"></i> Horários de aula
-        </div>
-        <div class="menu-item" onclick="redirecionarGradeCurricular()">
-            <i class="fas fa-book"></i> Grade Curricular
-        </div>
-        <div class="menu-item" onclick="toggleSubmenu()">
-            <i class="fas fa-user-graduate"></i> Central do Aluno <i class="fas fa-chevron-down submenu-icon"></i>
-        </div>
-        <div class="submenu" id="submenu-central-aluno">
-            <div class="submenu-item" onclick="redirecionarFinanceiro()">
-                <i class="fas fa-dollar-sign"></i> Financeiro
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <div class="collapse-wrapper">
+                    <a href="#" class="nav_collapse" id="sidebarCollapse">
+                        <div class="collapse-circle">
+                            <i class='bi bi-chevron-double-left collapse-icon'></i>
+                        </div>
+                    </a>
+                </div>
+                <a href="#" class="nav_logo">
+                    <i class='bi bi-grid-fill nav_logo-icon'></i>
+                    <span class="nav_logo-name">Menu</span>
+                </a>
+
+                <div class="nav_list">
+                    <a href="#" class="nav_link active">
+                        <i class='bi bi-house-fill nav_icon'></i>
+                        <span class="nav_name">Dashboard</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-card-checklist nav_icon'></i>
+                        <span class="nav_name">Atividades</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-bar-chart-fill nav_icon'></i>
+                        <span class="nav_name">Desempenho</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-people-fill nav_icon'></i>
+                        <span class="nav_name">Grade Curricular</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bi bi-gear-fill nav_icon'></i>
+                        <span class="nav_name">Configurações</span>
+                    </a>
+                </div>
             </div>
-            <div class="submenu-item" onclick="redirecionarConsultaNota()">
-                <i class="fas fa-file-alt"></i> Consulta de Nota
-            </div>
-        </div>
-           
-        <div class="menu-item" onclick="redirecionarArquivo()">
-            <i class="fas fa-folder"></i> Arquivo
-        </div>
-       <!--<div class="menu-item"><i class="fas fa-comments"></i> ChatBox</div>--> 
+        </nav>
     </div>
 
-    <div class="main-content">
-        <div class="header">PORTAL DO ALUNO</div>
-        <!-- AVISO DE BOAS-VINDAS PARA OS ALUNOS -->
-        <div class="aviso-aluno">
-            <strong><i class="fas fa-graduation-cap"></i> Bem-vindos, novos alunos! 🎓</strong><br>
-            Estamos muito felizes em recebê-los no nosso portal acadêmico! Aqui você encontrará todas as informações
-            necessárias para sua jornada acadêmica. Explore os recursos disponíveis e aproveite ao máximo essa nova
-            fase! 🚀
-        </div>
-        <!-- NOVAS INFORMAÇÕES ABAIXO DA MENSAGEM DE BOAS-VINDAS -->
-        <div class="info-container">
-            <a href="https://www.youtube.com/watch?v=MUC4Z-oKABY" class="info-box"
-                style="text-decoration: none; color: inherit;">
-                <img src="./imag/aulasOnline.jpg" alt="Aulas Online" class="info-img">
-                <p><strong>Apresentação da Escolaridade</strong><br>Assista o video da apresentação da Escolaridade.</p>
-            </a>
+    <div class="content" id="content">
+        <div class="main-content">
+            <div style="min-height: calc(100vh - 180px); padding: 20px;">
 
-            <a href="https://fametro.edu.br/central-de-atendimento-ao-academico/" class="info-box"
-                style="text-decoration: none; color: inherit;">
-                <img src="./imag/Suporte Acadêmico.png" alt="Suporte Acadêmico" class="info-img">
-                <p><strong>Suporte Acadêmico</strong><br>Entre em contato com nossos tutores para esclarecer dúvidas e
-                    obter apoio.</p>
-            </a>
+                <h2>Lista de Professores</h2>
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Matéria</th>
+                            <th scope="col">Turno</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Professor Silva</td>
+                            <td>silva@email.com</td>
+                            <td>Matemática</td>
+                            <td>Manhã</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">Editar</button>
+                                <button class="btn btn-sm btn-danger">Remover</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Professora Oliveira</td>
+                            <td>oliveira@email.com</td>
+                            <td>Português</td>
+                            <td>Tarde</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">Editar</button>
+                                <button class="btn btn-sm btn-danger">Remover</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="display: flex; justify-content: flex-end; margin-top: 10px;">
+                    <button class="add-button" data-modal-target="#modal-professor">
+                        <i class="fas fa-plus"></i> Adicionar Professor
+                    </button>
+                </div>
+
+                <h2 class="mt-4">Lista de Alunos</h2>
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Curso</th>
+                            <th scope="col">Período</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>João Aluno</td>
+                            <td>joao.aluno@email.com</td>
+                            <td>Engenharia Civil</td>
+                            <td>5º</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">Editar</button>
+                                <button class="btn btn-sm btn-danger">Remover</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Maria Aluna</td>
+                            <td>maria.aluna@email.com</td>
+                            <td>Medicina</td>
+                            <td>2º</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">Editar</button>
+                                <button class="btn btn-sm btn-danger">Remover</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="display: flex; justify-content: flex-end; margin-top: 10px;">
+                    <button class="add-button" data-modal-target="#modal-aluno">
+                        <i class="fas fa-plus"></i> Adicionar Aluno
+                    </button>
+                </div>
+
+                <div class="modal" id="modal-professor">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <div class="container">
+                            <form id="teacher-register" action="" method="post">
+                                <h3>Registro do Professor</h3>
+                                <fieldset>
+                                    <input placeholder="Nome" type="text" id="teacher_name" name="teacher_name"
+                                        tabindex="1" required autofocus>
+                                </fieldset>
+                                <fieldset>
+                                    <select placeholder="Gênero" type="select" id="teacher_gender" name="teacher_gender"
+                                        tabindex="2" required>
+                                        <option value="" disabled selected>Selecione seu gênero</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
+                                        <option value="Outro">Outro</option>
+                                    </select>
+                                </fieldset>
+                                <fieldset>
+                                    <select placeholder="Turno" type="select" id="teacher_turn" name="teacher_turn"
+                                        tabindex="3" required>
+                                        <option value="" disabled selected>Selecione seu turno</option>
+                                        <option value="Integral">Integral</option>
+                                        <option value="Noturno">Noturno</option>
+                                        <option value="Vespertino">Vespertino</option>
+                                    </select>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Email" type="email" id="teacher_email" name="teacher_email"
+                                        tabindex="4" required>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Senha" type="password" id="teacher_password"
+                                        name="teacher_password" tabindex="4" required>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="CPF" type="text" id="teacher_cpf" name="teacher_cpf"
+                                        maxlength="14" required>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Máteria" type="text" id="teacher_subject" name="teacher_subject"
+                                        required>
+                                </fieldset>
+                                <fieldset>
+                                    <button name="submit" type="submit" id="teacher-submit"
+                                        data-submit="...Sending">Cadastrar</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal" id="modal-aluno">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <div class="container">
+                            <form id="student-register" action="" method="post">
+                                <h3>Registro do Aluno</h3>
+                                <fieldset>
+                                    <input placeholder="Nome" type="text" id="student_name" name="student_name"
+                                        tabindex="1" required autofocus>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Email" type="email" id="student_email" name="student_email"
+                                        tabindex="2" required>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Senha" type="password" id="student_password"
+                                        name="student_password" tabindex="3" required>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Idade" type="number" id="student_age" name="student_age"
+                                        tabindex="4" required>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Curso" type="text" id="student_course" name="student_course"
+                                        tabindex="5" required>
+                                </fieldset>
+                                <fieldset>
+                                    <select placeholder="Gênero" type="select" id="student_gender" name="student_gender"
+                                        tabindex="6" required>
+                                        <option value="" disabled selected>Selecione seu gênero</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
+                                        <option value="Outro">Outro</option>
+                                    </select>
+                                </fieldset>
+                                <fieldset>
+                                    <select placeholder="Turno" type="select" id="student_turn" name="student_turn"
+                                        tabindex="7" required>
+                                        <option value="" disabled selected>Selecione seu turno</option>
+                                        <option value="Integral">Integral</option>
+                                        <option value="Noturno">Noturno</option>
+                                        <option value="Vespertino">Vespertino</option>
+                                    </select>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Período" type="text" id="student_period" name="student_period"
+                                        tabindex="8" required>
+                                </fieldset>
+                                <fieldset>
+                                    <button name="submit" type="submit" id="student-submit"
+                                        data-submit="...Sending">Cadastrar</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
-    <!-- Rodapé -->
     <footer class="footer">
-        <p>&copy; 2025 Portal Acadêmico. Todos os direitos reservados.</p>
-        <p>E-mail: <a href="mailto:suporte@portalacademico.com.br">suporte@portalacademico.com.br</a> | Telefone: (92)
-            99212-2244</p>
-        <div class="social-icons">
-            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>@TaskSubmit</h3>
+                <p>Transformando o Ensino com estilo.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
     </footer>
 
-    <!-- Funções JavaScript -->
-   <script>
-    function redirecionarHorarioAula() {
-        window.location.href = "Horário-de-Aula.html";
-    }
+    <script src="sidebar.js"></script>
+    <script src="portalaluno.css"></script>
+    <script src="./script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    function redirecionarGradeCurricular() {
-        window.location.href = "Grade-Curricular.html";
-    }
-
-    function toggleSubmenu() {
-        const submenu = document.getElementById('submenu-central-aluno');
-        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-    }
-
-    function redirecionarFinanceiro() {
-        window.location.href = "Financeiro.html"; // Atualize com o nome real da página
-    }
-
-    function redirecionarConsultaNota() {
-        window.location.href = "Consulta-de-Nota.html"; // Atualize com o nome real da página
-    }
-
-    function redirecionarArquivo() {
-        window.location.href = "Pasta.html"; // Página de destino
-    }
-</script>
 </body>
+
 </html>
