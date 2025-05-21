@@ -866,7 +866,7 @@ body {
             /* Efeito de animação ao passar o mouse */
         .info-box:hover {
             transform: scale(1.05);
-            border: 1px solid rgb(96, 21, 166);
+            border: 1px solid rgb(29, 35, 153);
         }
 
             /* Estilização das imagens animadas */
@@ -1051,7 +1051,7 @@ fieldset {
 }
 
 .footer a {
-    color: #5753d9;
+    color: #007bff;
     text-decoration: none;
     margin: 0 3px;
 }
@@ -1074,7 +1074,7 @@ fieldset {
 }
 
 .footer .social-icons a:hover {
-    color: #430ea0;
+    color: #007bff;
 }
 /*Texto de baixo da imagem*/
 .turma-info {
