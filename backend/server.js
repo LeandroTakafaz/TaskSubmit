@@ -7,6 +7,7 @@ const studentRoutes = require("./routes/studentRoutes");
 const professorRoutes = require("./routes/professorRoutes")
 const authRoutes = require("./routes/authRoutes");
 const curriculumRoutes = require("./routes/curriculumRoutes");
+const fileRoutes = require("./routes/fileRoutes");
 
 const app = express();
 
@@ -24,6 +25,8 @@ app.use("/api/student", studentRoutes);
 app.use("/api/professor", professorRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/curriculum", curriculumRoutes);
+app.use("/api/files", fileRoutes);
+app.use("/uploads", express.static("uploads"));
 
 const PORT = config.port || 3000;
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`))
