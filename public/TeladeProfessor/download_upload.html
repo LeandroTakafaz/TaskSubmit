@@ -93,35 +93,77 @@
     </main>
 
     <!-- Script para preview e remover -->
-    <script>
-        const arquivoInput = document.getElementById('arquivo');
-        const filePreview = document.getElementById('file-preview');
-        const fileName = document.getElementById('file-name');
-        const removeFileBtn = document.getElementById('remove-file');
+<script>
+    const arquivoInput = document.getElementById('arquivo');
+    const filePreview = document.getElementById('file-preview');
+    const fileName = document.getElementById('file-name');
+    const removeFileBtn = document.getElementById('remove-file');
+    const uploadForm = document.getElementById('upload-form');
+    const downloadList = document.querySelector('.download-section ul');
 
-        arquivoInput.addEventListener('change', function() {
-            if (arquivoInput.files.length > 0) {
-                fileName.textContent = arquivoInput.files[0].name;
-                filePreview.style.display = 'flex';
+    arquivoInput.addEventListener('change', function() {
+        if (arquivoInput.files.length > 0) {
+            fileName.textContent = arquivoInput.files[0].name;
+            filePreview.style.display = 'flex';
+        }
+    });
+
+    removeFileBtn.addEventListener('click', function() {
+        arquivoInput.value = '';
+        fileName.textContent = '';
+        filePreview.style.display = 'none';
+    });
+
+    uploadForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do form
+
+        if (arquivoInput.files.length > 0) {
+            const arquivo = arquivoInput.files[0];
+            const li = document.createElement('li');
+
+            let iconClass = 'fa-file';
+            const nomeArquivo = arquivo.name.toLowerCase();
+
+            if (nomeArquivo.endsWith('.pdf')) {
+                iconClass = 'fa-file-pdf';
+            } else if (nomeArquivo.endsWith('.doc') || nomeArquivo.endsWith('.docx')) {
+                iconClass = 'fa-file-word';
+            } else if (nomeArquivo.endsWith('.ppt') || nomeArquivo.endsWith('.pptx')) {
+                iconClass = 'fa-file-powerpoint';
             }
-        });
 
-        removeFileBtn.addEventListener('click', function() {
+            li.innerHTML = `
+                <a href="#"><i class="fas ${iconClass}"></i> ${arquivo.name}</a>
+                <button class="delete-file" title="Excluir Arquivo">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            `;
+
+            downloadList.appendChild(li);
+
+            // Reaplica o evento de excluir
+            li.querySelector('.delete-file').addEventListener('click', function() {
+                li.remove();
+            });
+
+            // Limpa o input e o preview
             arquivoInput.value = '';
             fileName.textContent = '';
             filePreview.style.display = 'none';
-        });
-        // Excluir arquivo
-        const deleteButtons = document.querySelectorAll('.delete-file');
+        }
+    });
 
-        deleteButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const li = this.closest('li');
-                    li.remove();
-            });
-        });
+    // Excluir arquivo (para os arquivos já existentes na lista)
+    const deleteButtons = document.querySelectorAll('.delete-file');
 
-    </script>
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const li = this.closest('li');
+            li.remove();
+        });
+    });
+</script>
+
 
 
 </body>
