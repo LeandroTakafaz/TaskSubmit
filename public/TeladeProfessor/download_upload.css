@@ -10,13 +10,13 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: 60px; /*Barra das informações de cima */
     background: linear-gradient(to right, #276f99, #082d6d);
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 19px;
     z-index: 1000;
 }
 
@@ -53,7 +53,7 @@ body {
     align-items: center;
     gap: 10px;
     color: white;
-    padding: 15px 20px;
+    padding: 18px 20px;
     text-decoration: none;
 }
 
@@ -65,18 +65,17 @@ body {
     margin-left: 200px;
     margin-top: 80px;
     padding: 20px;
-    width: 100%;
 }
 
 .box {
     background-color: #fff;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.507);    /*Campo de bordas das informações da tela */
     padding: 30px;
 }
 
 h1 {
-    color: #003366;
+    color: #0056b3;
 }
 
 .upload-section, .download-section {
@@ -117,7 +116,7 @@ ul li {
 }
 
 ul li a {
-    color: #003366;
+    color: #5c94cd;
     font-weight: bold;
     text-decoration: none;
 }
@@ -167,7 +166,7 @@ ul li a:hover {
 
 .file-preview span {
     font-weight: 500;
-    color: #333;
+    color: #3d1010;
 }
 
 .file-preview button {
@@ -181,4 +180,37 @@ ul li a:hover {
 
 .file-preview button:hover {
     transform: scale(1.2);
+}
+
+
+.download-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.download-section li {
+    background-color: #e9f0fb;
+    margin: 12px 0;     /*Espaço de baico dos campos de pdf*/
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download-section li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.delete-file {
+    background: none;
+    border: none;
+    color: #c00;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-file:hover {
+    color: #f00;
 }
