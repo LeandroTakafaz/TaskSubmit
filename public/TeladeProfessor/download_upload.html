@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download e Upload - Portal do Professor</title>
+    <link rel="stylesheet" href="./download_upload.css">
+    <link rel="stylesheet" href="./tela.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Topo -->
+    <header class="top-bar">
+        <div class="navbar-logo">
+            <img src="/public/imagens/logo_teste.png" alt="Logo" width="60" height="60">
+        </div>
+        <nav class="top-menu">
+            <a href="#">TaskSubmit</a>
+            <a class="active" href="#">Download e Upload</a>
+            <a href="#">Suporte</a>
+        </nav>
+        <a class="logout" href="/public/login.html">
+            <i class="fas fa-sign-out-alt"></i> Sair
+        </a>
+    </header>
+
+    <!-- Menu lateral -->
+    <aside class="sidebar">
+        <nav>
+            <a href="./tela.html" class="active"><i class="fas fa-home icon"></i><span>Página Inicial</span></a>
+            <a href="./atividades.html"><i class="fas fa-file-upload icon"></i><span>Adicionar-arquivo</span></a>
+            <a href="./turmas.html"><i class="fas fa-chalkboard-teacher icon"></i><span>Gerenciar turmas</span></a>
+            <a href="#"><i class="fas fa-cog icon"></i><span>Configurações</span></a>
+        </nav>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+        <div class="box">
+            <h1><i class="fas fa-file-alt"></i> Download e Upload de Arquivos</h1>
+            <p>Envie e baixe arquivos educacionais diretamente aqui no portal.</p>
+
+            <div class="upload-section">
+                <h2><i class="fas fa-upload"></i> Enviar Arquivo</h2>
+                <form id="upload-form" action="#" method="post" enctype="multipart/form-data">
+                    <label class="file-label">
+                        <i class="fas fa-cloud-upload-alt animate-icon"></i>
+                        <span>Escolher Arquivo</span>
+                        <input type="file" name="arquivo" id="arquivo" required hidden />
+                    </label>
+
+                    <!-- Preview e Remover -->
+                    <div class="file-preview" id="file-preview" style="display: none;">
+                        <span id="file-name"></span>
+                        <button type="button" id="remove-file" title="Remover Arquivo">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i> Enviar
+                    </button>
+                </form>
+            </div>
+
+            <div class="download-section">
+                <h2><i class="fas fa-download"></i> Arquivos Disponíveis para Download</h2>
+                <ul>
+                    <li><a href="#"><i class="fas fa-file-pdf"></i> Plano_de_Aula_Semana1.pdf</a></li>
+                    <li><a href="#"><i class="fas fa-file-pdf"></i> Material_Extra_Logica.pdf</a></li>
+                    <li><a href="#"><i class="fas fa-file-word"></i> Guia_Prova_Bimestral.docx</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para preview e remover -->
+    <script>
+        const arquivoInput = document.getElementById('arquivo');
+        const filePreview = document.getElementById('file-preview');
+        const fileName = document.getElementById('file-name');
+        const removeFileBtn = document.getElementById('remove-file');
+
+        arquivoInput.addEventListener('change', function() {
+            if (arquivoInput.files.length > 0) {
+                fileName.textContent = arquivoInput.files[0].name;
+                filePreview.style.display = 'flex';
+            }
+        });
+
+        removeFileBtn.addEventListener('click', function() {
+            arquivoInput.value = '';
+            fileName.textContent = '';
+            filePreview.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
