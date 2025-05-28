@@ -9,15 +9,54 @@
 </head>
   
 <body>
-
+<div><img src="/public/imagens/logo_teste.png" alt="" class="img"></div>
     <div class="header" style="justify-content: space-between;">
-        <div><i class="fas fa-file-alt"></i> Consulta de Nota</div>
-        <button onclick="voltarAoPortal()" style="background-color: #fff; color: #2079a2; padding: 6px 12px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">
+        
+        <button onclick="voltarAoPortal()" style="background-color: #fff; color: #2079a2; padding: 6px 12px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; margin-left: 153vh;">
             <i class="fas fa-arrow-left"></i> Voltar
         </button>
     </div>
 
-    <div class="container">
+ <div class="sidebar">
+        <div class="sidebar-header">
+            <h3>Meu Painel</h3>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li>
+                <a href="portalaluno.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-envelope"></i>
+                    <span>Mensagens</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>Configurações</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Sair</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container" style="margin-left: 270px;">
 
         <div class="alert">
             <strong>Aviso:</strong> Selecione a disciplina para consultar as notas correspondentes por professor e período.
@@ -33,7 +72,7 @@
             <option value="Estrutura de Dados">Estrutura de Dados</option>
         </select>
 
-        <table id="tabelaNotas">
+        <table id="tabelaNotas" style="left: 70px;">
             <thead>
                 <tr>
                     <th>Período</th>

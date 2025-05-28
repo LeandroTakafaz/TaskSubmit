@@ -1,11 +1,12 @@
         body {
+            box-sizing: border-box;
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
 
         .header {
-            background-color: #2079a2;
+            background-color: #0b102e;
             color: white;
             padding: 20px;
             font-size: 20px;
@@ -17,9 +18,16 @@
             margin-right: 10px;
             color: black;
         }
-
+.img{
+    width: 70px;
+    padding: 0;
+    border: 0;
+    position: fixed;
+    margin-left: 20px;
+}
         .container {
             padding: 20px;
+            left: 270px;
         }
 
         .alert {
@@ -53,7 +61,69 @@
             background-color: #2079a2;
             color: white;
         }
+.sidebar {
+    
+            width: 270px;
+            height: 100vh;
+            background: #030d20;
+            color: #ecf0f1;
+            position: fixed;
+            top: 67px;
+            left: 0;
+            overflow-y: auto;
+            transition: all 0.3s;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+ .sidebar-header h3 {
+            font-size: 1.3rem;
+            color: #fff;
+        }
 
+        /* Itens do Menu */
+        .sidebar-menu {
+            padding: 15px 0;
+        }
+
+        .sidebar-menu li {
+            list-style: none;
+            padding: 10px 20px;
+            transition: all 0.2s;
+        }
+
+        .sidebar-menu li:hover {
+            background: #34495e;
+            cursor: pointer;
+        }
+
+        .sidebar-menu li a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar-menu li a i {
+            font-size: 1.1rem;
+        }
+
+        .sidebar-menu li:hover a {
+            color: #fff;
+        }
+
+        /* Versão responsiva */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 70px;
+                overflow: hidden;
+            }
+            .sidebar-header h3, .sidebar-menu li span {
+                display: none;
+            }
+            .sidebar-menu li {
+                text-align: center;
+            }
+        }
 
 
         
