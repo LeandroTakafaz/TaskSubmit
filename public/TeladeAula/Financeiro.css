@@ -2,12 +2,12 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ccc;
+    background: linear-gradient(to right, #276f99, #082d6d);
 }
 
 .sidebar {
 width: 260px;
-background-color: #157399;
+background: linear-gradient(to right, #276f99, #607baa);
 color: #fff;
 height: 100vh;
 padding: 20px;
@@ -24,7 +24,7 @@ margin-bottom: 20px;
 width: 80px;
 height: 80px;
 border-radius: 50%;
-background-color: #fff;
+background-color: #120a28;
 padding: 4px;
 }
 
@@ -62,7 +62,7 @@ margin-bottom: 10px;
 display: block;
 color: #fff;
 text-decoration: none;
-background-color: #106a8a;
+background: linear-gradient(to right, #0f6598, #082d6d);
 padding: 12px 15px;
 border-radius: 5px;
 font-weight: bold;
@@ -75,7 +75,7 @@ margin-right: 8px;
 }
 
 .sidebar nav ul li a:hover {
-background-color: #0e5b76;
+background-color: #1f6f8c;
 }
 
 
@@ -89,7 +89,7 @@ background-color: #0e5b76;
     font-weight: bold;
     margin-bottom: 20px;
     color: #ffffff;
-    background-color: #007b9e;
+    background: linear-gradient(to right, #4e99c5, #1252c0);
     padding: 10px 20px;
     border-radius: 5px;
 }
@@ -97,7 +97,7 @@ background-color: #0e5b76;
 .aviso-aluno {
     background-color: #e1f3fd;
     padding: 15px;
-    border-left: 5px solid #007b9e;
+    border-left: 5px solid #000000;
     border-radius: 8px;
     margin-bottom: 20px;
 }
@@ -111,7 +111,7 @@ background-color: #0e5b76;
 
 .financeiro-container h2 {
     margin-bottom: 20px;
-    color: #007b9e;
+    color: #14111e;
 }
 
 .tabela-financeira {
@@ -129,7 +129,7 @@ background-color: #0e5b76;
 }
 
 .tabela-financeira th {
-    background-color: #007b9e;
+    background: linear-gradient(to right, #276f99, #082d6d);
     color: #fff;
 }
 
@@ -142,7 +142,7 @@ background-color: #0e5b76;
 }
 
 .status.pago {
-    color: green;
+    color: rgb(7, 120, 7);
     font-weight: bold;
 }
 
@@ -152,7 +152,7 @@ background-color: #0e5b76;
 }
 
 .botao-boleto {
-    background-color: #007b9e;
+    background: linear-gradient(to right, #276f99, #082d6d); /*Cor do EMITIR BOLETO */
     color: #fff;
     padding: 6px 12px;
     border-radius: 5px;
@@ -160,7 +160,7 @@ background-color: #0e5b76;
 }
 
 .botao-boleto:hover {
-    background-color: #005f7f;
+    background-color: #b5b5b5;
 }
 .submenu-item {
     padding: 8px 0;
@@ -170,7 +170,7 @@ background-color: #0e5b76;
 }
 .btn-voltar {
     display: inline-block;
-    background-color: #007b9e;
+   background: linear-gradient(to right, #276f99, #082d6d);
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -180,5 +180,7 @@ background-color: #0e5b76;
 }
 
 .btn-voltar:hover {
-    background-color: #005f7d;
+    background-color: #919191;
 }
+
+
