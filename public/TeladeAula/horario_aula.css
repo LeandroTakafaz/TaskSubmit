@@ -124,7 +124,7 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
+    background: linear-gradient(to right, #276f99, #082d6d);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     
@@ -760,7 +760,7 @@ body {
       }
       
       th {
-        background-color: #6a11cb;
+        background: linear-gradient(to right, #276f99, #082d6d);
         color: white;
       }
       
