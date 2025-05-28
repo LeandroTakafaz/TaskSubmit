@@ -321,7 +321,7 @@ body {
     -webkit-font-smoothing:antialiased;
     -moz-font-smoothing:antialiased;
     -o-font-smoothing:antialiased;
-    font-smoothing:antialiased;
+    -font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
     }
     
@@ -778,7 +778,7 @@ body {
       }
       
       th {
-        background-color: #6a11cb;
+        background: linear-gradient(to right, #276f99, #082d6d);
         color: white;
       }
       
