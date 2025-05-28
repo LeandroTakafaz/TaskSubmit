@@ -19,11 +19,9 @@
                 <img src="/public/imagens/logo_teste.png" alt="Logo" width="60" height="60">
             </div>
             <div class="navbar-menu">
-                <a href="#" class="navbar-link">TaskSubmit</a>
-                <a href="#" class="navbar-link">Finanças</a>
+                <a href="/public/landing.html" class="navbar-link">TaskSubmit</a>
                 <a href="./atividades.html" class="navbar-link">Atividades</a>
-                <a href="#" class="navbar-link">Rematrícula</a>
-                <a href="#" class="navbar-link">Suporte</a>
+                <a href="/public/TeladeAula/suporte.html" class="navbar-link">Suporte</a>
             </div>
             <div class="navbar-logout">
                 <a href="login.html" class="logout-button">
@@ -68,11 +66,13 @@
             </div>
 
             <div class="turmas-container">
+
+                <!-- Turma - 7º Período -->
                 <div class="turma-card">
-                    <h3>Turma: 7º PERIODO</h3>
-                    <p><strong>DISCIPLINA:</strong> ENGENHARIA DE SOFTWARE</p>
-                    <p><strong>SALA:</strong> 35</p>
-                    <p><strong>ANDAR:</strong> 5</p>
+                    <h3>Turma: 7º PERÍODO</h3>
+                    <p><strong>Disciplina:</strong> Engenharia de Software</p>
+                    <p><strong>Sala:</strong> 35</p>
+                    <p><strong>Andar:</strong> 5</p>
                     <p><strong>Alunos:</strong> 30</p>
                     <div class="turma-actions">
                         <button>Folha de Frequência</button>
@@ -80,22 +80,76 @@
                     </div>
                 </div>
 
+                <!-- Turma - 8º Período -->
                 <div class="turma-card">
-                    <h3>Turma: 8º PERIODO </h3>
-                    <p><strong>Disciplina:</strong> AUDITORIA E QUALIDADE DE PROCESSO E PRODUTO</p>
-                    <p><strong>SALA:</strong> 27</p>
-                    <p><strong>ANDAR:</strong> 4</p>
+                    <h3>Turma: 8º PERÍODO</h3>
+                    <p><strong>Disciplina:</strong> Auditoria e Qualidade de Processo e Produto</p>
+                    <p><strong>Sala:</strong> 27</p>
+                    <p><strong>Andar:</strong> 4</p>
                     <p><strong>Alunos:</strong> 18</p>
                     <div class="turma-actions">
                         <button>Folha de Frequência</button>
                         <button>Visualizar Alunos</button>
                     </div>
                 </div>
+
+                <!-- Exemplo de nova turma -->
+                <div class="turma-card">
+                    <h3>Turma: 6º PERÍODO</h3>
+                    <p><strong>Disciplina:</strong> Banco de Dados Avançado</p>
+                    <p><strong>Sala:</strong> 12</p>
+                    <p><strong>Andar:</strong> 3</p>
+                    <p><strong>Alunos:</strong> 28</p>
+                    <div class="turma-actions">
+                        <button>Folha de Frequência</button>
+                        <button>Visualizar Alunos</button>
+                    </div>
+                </div>
+                <!-- Turma - 7º Período -->
+<div class="turma-card">
+    <h3>Turma: 7º PERÍODO</h3>
+    <p><strong>Disciplina:</strong> Engenharia de Software</p>
+    <p><strong>Sala:</strong> 35</p>
+    <p><strong>Andar:</strong> 5</p>
+    <p><strong>Alunos:</strong> 30</p>
+    <div class="turma-actions">
+        <button onclick="abrirModal('modal-frequencia-7')">Folha de Frequência</button>
+        <button onclick="abrirModal('modal-alunos-7')">Visualizar Alunos</button>
+    </div>
+</div>
+
+<!-- Modal Folha de Frequência -->
+<div class="modal" id="modal-frequencia-7">
+    <div class="modal-content">
+        <span class="fechar" onclick="fecharModal('modal-frequencia-7')">&times;</span>
+        <h3>Folha de Frequência - 7º PERÍODO</h3>
+        <p>Lista de presença: João, Maria, Ana, Carlos, ...</p>
+    </div>
+</div>
+
+<!-- Modal Visualizar Alunos -->
+<div class="modal" id="modal-alunos-7">
+    <div class="modal-content">
+        <span class="fechar" onclick="fecharModal('modal-alunos-7')">&times;</span>
+        <h3>Alunos da Turma - 7º PERÍODO</h3>
+        <ul>
+            <li>João Silva</li>
+            <li>Maria Oliveira</li>
+            <li>Ana Souza</li>
+            <li>Carlos Pereira</li>
+            <!-- Adicione mais alunos -->
+        </ul>
+    </div>
+</div>
+
+
+                <!-- Adicione mais turmas aqui -->
+
             </div>
         </div>
     </div>
 
-    <!-- FOOTER NOVO -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-left">
@@ -114,6 +168,47 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="sidebar.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Função para abrir o modal
+        function abrirModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+            }
+        }
+
+        // Função para fechar o modal
+        function fecharModal(modal) {
+            modal.style.display = 'none';
+        }
+
+        // Adiciona evento de clique para todos os botões de abrir modal
+        document.querySelectorAll('[data-modal]').forEach(button => {
+            button.addEventListener('click', function () {
+                const modalId = this.getAttribute('data-modal');
+                abrirModal(modalId);
+            });
+        });
+
+        // Adiciona evento de clique para fechar modal ao clicar no botão "fechar"
+        document.querySelectorAll('.modal .fechar').forEach(button => {
+            button.addEventListener('click', function () {
+                const modal = this.closest('.modal');
+                fecharModal(modal);
+            });
+        });
+
+        // Adiciona evento para fechar modal ao clicar fora dele
+        window.addEventListener('click', function (event) {
+            if (event.target.classList.contains('modal')) {
+                fecharModal(event.target);
+            }
+        });
+    });
+</script>
+
+    
 </body>
 
 </html>
