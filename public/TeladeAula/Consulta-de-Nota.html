@@ -10,56 +10,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="Consulta-de-Nota.css">
 </head>
-
-<body id="body-pd">
-
-    <header class="header" id="header">
-        <nav class="navbar">
-            <div class="navbar-logo">
-                <img src="/public/imagens/logo_teste.png" alt="Logo" width="60" height="60">
-            </div>
-            <div class="navbar-menu">
-                <a href="#" class="navbar-link">TaskSubmit</a>
-                <a href="#" class="navbar-link">Finanças</a>
-                <a href="#" class="navbar-link">Atividades</a>
-                <a href="#" class="navbar-link">Rematrícula</a>
-                <a href="#" class="navbar-link">Suporte</a>
-            </div>
-            <div class="navbar-logout">
-                <a href="login.html" class="logout-button">
-                    <i class="fas fa-sign-out-alt"></i> Sair
-                </a>
-            </div>
-        </nav>
-    </header>
-
-    <div class="l-navbar" id="nav-bar">
-        <nav class="nav">
-            <div>
-                <div class="collapse-wrapper">
-                    <a href="#" class="nav_collapse" id="sidebarCollapse">
-                        <div class="collapse-circle">
-                            <i class='bi bi-chevron-double-left collapse-icon'></i>
-                        </div>
-                    </a>
-                </div>
-                <a href="./portalaluno.html" class="nav_logo">
-                    <i class='bi bi-grid-fill nav_logo-icon'></i>
-                    <span class="nav_logo-name">Menu</span>
-                </a>
-
-                <div class="nav_list">
-
-                    <a href="#" class="nav_link active">
-                        <i class='bi bi-card-checklist nav_icon'></i>
-                        <span class="nav_name">Horario de aulas</span>
-                    </a>
-                </div>
-            </div>
-        </nav>
+  
+<body>
+<div><img src="/public/imagens/logo_teste.png" alt="" class="img"></div>
+    <div class="header" style="justify-content: space-between;">
+        
+        <button onclick="voltarAoPortal()" style="background-color: #fff; color: #2079a2; padding: 6px 12px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; margin-left: 153vh;">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </button>
     </div>
 
-    <div class="container">
+ <div class="sidebar">
+        <div class="sidebar-header">
+            <h3>Meu Painel</h3>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li>
+                <a href="portalaluno.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-envelope"></i>
+                    <span>Mensagens</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>Configurações</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Sair</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container" style="margin-left: 270px;">
 
         <div class="alert">
             <strong>Aviso:</strong> Selecione a disciplina para consultar as notas correspondentes por professor e período.
@@ -75,7 +75,7 @@
             <option value="Estrutura de Dados">Estrutura de Dados</option>
         </select>
 
-        <table id="tabelaNotas">
+        <table id="tabelaNotas" style="left: 70px;">
             <thead>
                 <tr>
                     <th>Período</th>
