@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Topo -->
@@ -65,105 +67,33 @@
             </div>
 
             <div class="download-section">
-    <h2><i class="fas fa-download"></i> Arquivos Disponíveis para Download</h2>
-    <ul>
-        <li>
-            <a href="#"><i class="fas fa-file-pdf"></i> Plano_de_Aula_Semana1.pdf</a>
-            <button class="delete-file" title="Excluir Arquivo">
-                <i class="fas fa-trash-alt"></i>
-            </button>
-        </li>
-        <li>
-            <a href="#"><i class="fas fa-file-pdf"></i> Material_Extra_Logica.pdf</a>
-            <button class="delete-file" title="Excluir Arquivo">
-                <i class="fas fa-trash-alt"></i>
-            </button>
-        </li>
-        <li>
-            <a href="#"><i class="fas fa-file-word"></i> Guia_Prova_Bimestral.docx</a>
-            <button class="delete-file" title="Excluir Arquivo">
-                <i class="fas fa-trash-alt"></i>
-            </button>
-        </li>
-    </ul>
-</div>
+                <h2><i class="fas fa-download"></i> Arquivos Disponíveis para Download</h2>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fas fa-file-pdf"></i> Plano_de_Aula_Semana1.pdf</a>
+                        <button class="delete-file" title="Excluir Arquivo">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-file-pdf"></i> Material_Extra_Logica.pdf</a>
+                        <button class="delete-file" title="Excluir Arquivo">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-file-word"></i> Guia_Prova_Bimestral.docx</a>
+                        <button class="delete-file" title="Excluir Arquivo">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
 
         </div>
     </main>
 
-    <!-- Script para preview e remover -->
-<script>
-    const arquivoInput = document.getElementById('arquivo');
-    const filePreview = document.getElementById('file-preview');
-    const fileName = document.getElementById('file-name');
-    const removeFileBtn = document.getElementById('remove-file');
-    const uploadForm = document.getElementById('upload-form');
-    const downloadList = document.querySelector('.download-section ul');
-
-    arquivoInput.addEventListener('change', function() {
-        if (arquivoInput.files.length > 0) {
-            fileName.textContent = arquivoInput.files[0].name;
-            filePreview.style.display = 'flex';
-        }
-    });
-
-    removeFileBtn.addEventListener('click', function() {
-        arquivoInput.value = '';
-        fileName.textContent = '';
-        filePreview.style.display = 'none';
-    });
-
-    uploadForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede o envio padrão do form
-
-        if (arquivoInput.files.length > 0) {
-            const arquivo = arquivoInput.files[0];
-            const li = document.createElement('li');
-
-            let iconClass = 'fa-file';
-            const nomeArquivo = arquivo.name.toLowerCase();
-
-            if (nomeArquivo.endsWith('.pdf')) {
-                iconClass = 'fa-file-pdf';
-            } else if (nomeArquivo.endsWith('.doc') || nomeArquivo.endsWith('.docx')) {
-                iconClass = 'fa-file-word';
-            } else if (nomeArquivo.endsWith('.ppt') || nomeArquivo.endsWith('.pptx')) {
-                iconClass = 'fa-file-powerpoint';
-            }
-
-            li.innerHTML = `
-                <a href="#"><i class="fas ${iconClass}"></i> ${arquivo.name}</a>
-                <button class="delete-file" title="Excluir Arquivo">
-                    <i class="fas fa-trash-alt"></i>
-                </button>
-            `;
-
-            downloadList.appendChild(li);
-
-            // Reaplica o evento de excluir
-            li.querySelector('.delete-file').addEventListener('click', function() {
-                li.remove();
-            });
-
-            // Limpa o input e o preview
-            arquivoInput.value = '';
-            fileName.textContent = '';
-            filePreview.style.display = 'none';
-        }
-    });
-
-    // Excluir arquivo (para os arquivos já existentes na lista)
-    const deleteButtons = document.querySelectorAll('.delete-file');
-
-    deleteButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const li = this.closest('li');
-            li.remove();
-        });
-    });
-</script>
-
-
-
+    <script src="../files.js"></script>
 </body>
+
 </html>

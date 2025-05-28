@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta de Nota</title>
-    <link rel="stylesheet" href="./Consulta-de-Nota.css">
+    <title>@TaskSubmit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="Consulta-de-Nota.css">
 </head>
   
 <body>
@@ -88,7 +91,21 @@
 
     </div>
 
-    <script>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>@TaskSubmit</h3>
+                <p>Transformando o Ensino com estilo.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+        <script>
         const dadosNotas = [
             { periodo: '1º', disciplina: 'Algoritmos', professor: 'Prof. Ana', nota: 8.5 },
             { periodo: '2º', disciplina: 'Banco de Dados', professor: 'Prof. João', nota: 7.8 },
@@ -127,6 +144,13 @@
         window.location.href = "portalaluno.html";
     }
     </script>
+    <script src="sidebar.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
