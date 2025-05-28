@@ -18,11 +18,8 @@
                 <img src="/public/imagens/logo_teste.png" alt="Logo" width="60" height="60">
             </div>
             <div class="navbar-menu">
-                <a href="#" class="navbar-link">TaskSubmit</a>
-                <a href="#" class="navbar-link">Finanças</a>
-                <a href="#" class="navbar-link">Atividades</a>
-                <a href="#" class="navbar-link">Rematrícula</a>
-                <a href="#" class="navbar-link">Suporte</a>
+                <a href="/public/landing.html" class="navbar-link">TaskSubmit</a>
+                <a href="/public/TeladeAula/suporte.html" class="navbar-link">Suporte</a>
             </div>
             <div class="navbar-logout">
                 <a href="login.html" class="logout-button">
@@ -47,86 +44,99 @@
                     <i class='bi bi-grid-fill nav_logo-icon'></i>
                     <span class="nav_logo-name">Menu</span>
                 </a>
-
-                    </a>
-                    <a href="#" class="nav_link">
-                        <i class='bi bi-gear-fill nav_icon'></i>
-                        <span class="nav_name">Configurações</span>
-                    </a>
-                </div>
+                <a href="#" class="nav_link active">
+                    <i class='bi bi-gear-fill nav_icon'></i>
+                    <span class="nav_name">Horário</span>
+                </a>
             </div>
         </nav>
     </div>
 
-<!-- CONTEÚDO PRINCIPAL -->
-<div class="content" id="content">
-    
-    <div class="aviso-aluno">
-        <strong><i class="fas fa-calendar-alt"></i> Confira abaixo os horários de suas Aulas:</strong><br>
-        Planeje suas aulas e atividades com antecedência! 📅
-    </div>
-    
-    <div class="info-container">
-        <div class="info-box">
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="content" id="content">
+        <div class="info-container">
+            <div class="info-box">
+                <div class="aviso-aluno">
+                    <strong><i class="fas fa-calendar-alt"></i> Confira abaixo os horários de suas Aulas:</strong><br>
+                    Planeje suas aulas e atividades com antecedência! 📅
+                </div>
 
-            <p><strong>Horário Semanal:</strong></p>
+                <p><strong>Horário Semanal:</strong></p>
 
-            <table class="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Dia da Semana</th>
-                        <th>Horário</th>
-                        <th>Disciplina</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Segunda-feira</td>
-                        <td>18:30 - 21:30</td>
-                        <td>Sistema da Informação</td>
-                    </tr>
-                    <tr>
-                        <td>Terça-feira</td>
-                        <td>18:30 - 21:30</td>
-                        <td>ADS</td>
-                    </tr>
-                    <tr>
-                        <td>Quarta-feira</td>
-                        <td>18:30 - 21:30</td>
-                        <td>Engenharia de Software</td>
-                    </tr>
-                    <tr>
-                        <td>Quinta-feira</td>
-                        <td>18:30 - 21:30</td>
-                        <td>ADS</td>
-                    </tr>
-                    <tr>
-                        <td>Sexta-feira</td>
-                        <td>18:30 - 21:30</td>
-                        <td>Sistema da Informação</td>
-                    </tr>
-                </tbody>
-            </table>
+               <table class="schedule-table">
+    <thead>
+        <tr>
+            <th>Dia da Semana</th>
+            <th>Data da Aula</th>
+            <th>Horário</th>
+            <th>Disciplina</th>
+            <th>Professor</th>
+            <th>Sala</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Dia da Semana">Segunda-feira</td>
+            <td data-label="Data da Aula">03/06/2025</td>
+            <td data-label="Horário">18:30 - 21:30</td>
+            <td data-label="Disciplina">Sistemas de Informação</td>
+            <td data-label="Professor">Prof. Carlos Silva</td>
+            <td data-label="Sala">Lab 101</td>
+        </tr>
+        <tr>
+            <td data-label="Dia da Semana">Terça-feira</td>
+            <td data-label="Data da Aula">04/06/2025</td>
+            <td data-label="Horário">18:30 - 21:30</td>
+            <td data-label="Disciplina">Análise e Desenvolvimento de Sistemas</td>
+            <td data-label="Professor">Prof. Ana Souza</td>
+            <td data-label="Sala">Sala 203</td>
+        </tr>
+        <tr>
+            <td data-label="Dia da Semana">Quarta-feira</td>
+            <td data-label="Data da Aula">05/06/2025</td>
+            <td data-label="Horário">18:30 - 21:30</td>
+            <td data-label="Disciplina">Banco de Dados</td>
+            <td data-label="Professor">Prof. João Mendes</td>
+            <td data-label="Sala">Lab 202</td>
+        </tr>
+        <tr>
+            <td data-label="Dia da Semana">Quinta-feira</td>
+            <td data-label="Data da Aula">06/06/2025</td>
+            <td data-label="Horário">18:30 - 21:30</td>
+            <td data-label="Disciplina">Estrutura de Dados</td>
+            <td data-label="Professor">Prof. Maria Clara</td>
+            <td data-label="Sala">Sala 305</td>
+        </tr>
+        <tr>
+            <td data-label="Dia da Semana">Sexta-feira</td>
+            <td data-label="Data da Aula">07/06/2025</td>
+            <td data-label="Horário">18:30 - 21:30</td>
+            <td data-label="Disciplina">Programação Web</td>
+            <td data-label="Professor">Prof. Lucas Andrade</td>
+            <td data-label="Sala">Lab 303</td>
+        </tr>
+    </tbody>
+</table>
+
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Rodapé -->
-<footer class="footer">
-    <p>&copy; 2025 Portal Acadêmico. Todos os direitos reservados.</p>
-    <p>E-mail: <a href="mailto:suporte@portalacademico.com.br">suporte@portalacademico.com.br</a> | Telefone: (92) 99212-2244</p>
-    <div class="social-icons">
-        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-    </div>
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2025 Portal Acadêmico. Todos os direitos reservados.</p>
+        <p>E-mail: <a href="mailto:suporte@portalacademico.com.br">suporte@portalacademico.com.br</a> | Telefone: (92) 99212-2244</p>
+        <div class="social-icons">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
 
-<!-- SCRIPTS -->
-<script src="/public/admin.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+    <script src="/public/admin.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
