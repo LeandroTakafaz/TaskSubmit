@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rematrícula de Aluno</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0; padding: 0;
+  }
+  .container {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  h1 {
+    color: #3c17b7; /* azul escuro */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  button {
+    margin-top: 25px;
+    background-color: #005f99;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+     background: linear-gradient(to right, #276f99, #082d6d);
+  }
+  .success-msg {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 4px;
+    display: none;
+  }
+  .btn-voltar {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #fff;
+    color: #080a6d;
+    font-weight: bold;
+    border: 2px solid #005f99;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+  }
+  .btn-voltar:hover {
+    background-color: #260099;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Rematrícula de Aluno</h1>
+  <form id="rematriculaForm">
+    <label for="matricula">Número de Matrícula</label>
+    <input type="text" id="matricula" name="matricula" required />
+
+    <label for="nome">Nome Completo</label>
+    <input type="text" id="nome" name="nome" required />
+
+    <label for="curso">Curso</label>
+    <select id="curso" name="curso" required>
+      <option value="">Selecione o curso</option>
+      <option value="SI">Sistemas de Informação</option>
+      <option value="ADS">Análise e Desenvolvimento de Sistemas</option>
+      <option value="CC">Ciência da Computação</option>
+    </select>
+
+    <button type="submit">Confirmar Rematrícula</button>
+  </form>
+
+  <button type="button" class="btn-voltar" onclick="history.back()">← Voltar</button>
+
+  <div class="success-msg" id="successMsg">Rematrícula realizada com sucesso!</div>
+</div>
+
+<script>
+  const form = document.getElementById('rematriculaForm');
+  const successMsg = document.getElementById('successMsg');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Aqui pode entrar validação adicional e chamada a backend para salvar
+
+    // Exemplo simples: mostrar mensagem sucesso
+    successMsg.style.display = 'block';
+
+    // Resetar formulário
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
