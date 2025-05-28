@@ -262,8 +262,8 @@
                                 <h3>Editar Professor</h3>
                                 <input type="hidden" id="edit_teacher_id" name="edit_teacher_id">
                                 <fieldset>
-                                    <input placeholder="Nome" type="text" id="edit_teacher_name" name="edit_teacher_name"
-                                        tabindex="1" required autofocus>
+                                    <input placeholder="Nome" type="text" id="edit_teacher_name"
+                                        name="edit_teacher_name" tabindex="1" required autofocus>
                                 </fieldset>
                                 <fieldset>
                                     <select id="edit_teacher_gender" name="edit_teacher_gender" tabindex="2" required>
@@ -282,16 +282,16 @@
                                     </select>
                                 </fieldset>
                                 <fieldset>
-                                    <input placeholder="Email" type="email" id="edit_teacher_email" name="edit_teacher_email"
-                                        tabindex="4" required>
+                                    <input placeholder="Email" type="email" id="edit_teacher_email"
+                                        name="edit_teacher_email" tabindex="4" required>
                                 </fieldset>
                                 <fieldset>
                                     <input placeholder="CPF" type="text" id="edit_teacher_cpf" name="edit_teacher_cpf"
                                         maxlength="14" required>
                                 </fieldset>
                                 <fieldset>
-                                    <input placeholder="Matéria" type="text" id="edit_teacher_subject" name="edit_teacher_subject"
-                                        required>
+                                    <input placeholder="Matéria" type="text" id="edit_teacher_subject"
+                                        name="edit_teacher_subject" required>
                                 </fieldset>
                                 <fieldset>
                                     <button name="submit" type="submit" id="teacher-update"
@@ -310,20 +310,20 @@
                                 <h3>Editar Aluno</h3>
                                 <input type="hidden" id="edit_student_id" name="edit_student_id">
                                 <fieldset>
-                                    <input placeholder="Nome" type="text" id="edit_student_name" name="edit_student_name"
-                                        tabindex="1" required autofocus>
+                                    <input placeholder="Nome" type="text" id="edit_student_name"
+                                        name="edit_student_name" tabindex="1" required autofocus>
                                 </fieldset>
                                 <fieldset>
-                                    <input placeholder="Email" type="email" id="edit_student_email" name="edit_student_email"
-                                        tabindex="2" required>
+                                    <input placeholder="Email" type="email" id="edit_student_email"
+                                        name="edit_student_email" tabindex="2" required>
                                 </fieldset>
                                 <fieldset>
-                                    <input placeholder="Idade" type="number" id="edit_student_age" name="edit_student_age"
-                                        tabindex="4" required>
+                                    <input placeholder="Idade" type="number" id="edit_student_age"
+                                        name="edit_student_age" tabindex="4" required>
                                 </fieldset>
                                 <fieldset>
-                                    <input placeholder="Curso" type="text" id="edit_student_course" name="edit_student_course"
-                                        tabindex="5" required>
+                                    <input placeholder="Curso" type="text" id="edit_student_course"
+                                        name="edit_student_course" tabindex="5" required>
                                 </fieldset>
                                 <fieldset>
                                     <select id="edit_student_gender" name="edit_student_gender" tabindex="6" required>
@@ -342,8 +342,8 @@
                                     </select>
                                 </fieldset>
                                 <fieldset>
-                                    <input placeholder="Período" type="text" id="edit_student_period" name="edit_student_period"
-                                        tabindex="8" required>
+                                    <input placeholder="Período" type="text" id="edit_student_period"
+                                        name="edit_student_period" tabindex="8" required>
                                 </fieldset>
                                 <fieldset>
                                     <button name="submit" type="submit" id="student-update"
@@ -371,6 +371,34 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.querySelectorAll('[data-modal-target]').forEach(button => {
+            button.addEventListener('click', () => {
+                const modalId = button.getAttribute('data-modal-target');
+                const modal = document.querySelector(modalId);
+                if (modal) {
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        document.querySelectorAll('.close-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+        window.addEventListener('click', (event) => {
+            document.querySelectorAll('.modal').forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
 
     <script src="sidebar.js"></script>
     <script src="admin.js"></script>

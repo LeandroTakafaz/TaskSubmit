@@ -73,7 +73,7 @@ router.put("/:id", async (req, res) => {
         professor.gender = gender || professor.gender;
         professor.turn = turn || professor.turn;
         professor.cpf = cpf || professor.cpf;
-        professor.subjects = subjects ? subjects.split(",") : professor.subjects;
+        professor.subjects = subjects || professor.subjects;
 
         await professor.save();
 

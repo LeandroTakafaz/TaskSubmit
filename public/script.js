@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     professorForm.reset();
                     const modal = document.getElementById("modal-professor");
                     if (modal) modal.style.display = "none";
+                    window.location.reload();
                 } else {
                     alert(`Erro: ${data.msg}`);
                 }
@@ -104,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     studentForm.reset();
                     const modal = document.getElementById("modal-aluno");
                     if (modal) modal.style.display = "none";
+                    window.location.reload();
                 } else {
                     alert(`Erro: ${data.msg}`);
                 }
