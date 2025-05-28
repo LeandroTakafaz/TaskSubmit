@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suporte - Portal do Aluno</title>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --bg-color: #f5f7fa;
+      --text-color: #333;
+      --header-bg: #082d6d;
+      --header-text: #fff;
+      --section-bg: #fff;
+      --link-color: #276f99;
+      --hover-link: #00264d;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --header-bg: #1f1f1f;
+      --header-text: #f0f0f0;
+      --section-bg: #1e1e1e;
+      --link-color: #90caf9;
+      --hover-link: #64b5f6;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: var(--header-text);
+      padding: 20px 40px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-title {
+      font-size: 2em;
+      margin: 0 auto;
+      text-align: center;
+      animation: slideDown 0.8s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      color: var(--header-text);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9em;
+      padding: 8px 14px;
+      border: 2px solid var(--header-text);
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn i {
+      margin-right: 8px;
+    }
+
+    .btn:hover {
+      background-color: var(--header-text);
+      color: var(--header-bg);
+      transform: translateY(-2px);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      animation: slideUp 1s ease-out forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      background-color: var(--section-bg);
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 25px 30px;
+      margin-bottom: 30px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+    }
+
+    section h2 {
+      color: var(--link-color);
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--hover-link);
+    }
+
+    footer {
+      background-color: var(--header-bg);
+      color: var(--header-text);
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn-group {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="header-title">Suporte ao Portal do Aluno</h1>
+    <div class="btn-group">
+      <a href="./portalaluno.html" class="btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+      <button class="btn" id="toggle-theme"><i class="fas fa-adjust"></i> Modo Escuro</button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2><i class="fas fa-headset"></i> Contato</h2>
+      <p>Para dúvidas ou problemas técnicos, entre em contato conosco:</p>
+      <ul>
+        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:suporte@portalaluno.edu.br">suporte@portalaluno.edu.br</a></li>
+        <li><i class="fas fa-phone"></i> Telefone: (92) 98423-5281</li>
+        <li><i class="fas fa-comments"></i> Chat ao vivo: Segunda a Sexta, das 9h às 18h</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-clock"></i> Horário de Atendimento</h2>
+      <ul>
+        <li>Segunda a Sexta: 6h às 22h</li>
+        <li>Sábado: 8h às 12h</li>
+        <li>Domingo: Fechado</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-question-circle"></i> Perguntas Frequentes (FAQ)</h2>
+      <ul>
+        <li><strong>Como resetar minha senha?</strong> — Use a opção "Esqueci minha senha" na tela de login.</li>
+        <li><strong>Onde encontro meus boletos?</strong> — Na área "Financeiro" do portal.</li>
+        <li><strong>Posso acessar pelo celular?</strong> — Sim, o portal é responsivo.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-link"></i> Links Úteis</h2>
+      <ul>
+        <li><a href="https://fametro.edu.br/wp-content/uploads/2024/09/MANUAL-DO-ALUNO-CEUNI-FAMETRO-2024.pdf" target="_blank"><i class="fas fa-book"></i> Manual do Usuário</a></li>
+        <li><a href="https://blog.fametro.edu.br/" target="_blank"><i class="fas fa-newspaper"></i> Últimas Notícias</a></li>
+        <li><a href="https://fametro.edu.br/faleconosco/" target="_blank"><i class="fas fa-paper-plane"></i> Formulário de Contato</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Portal do Aluno - Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-theme');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggleBtn.innerHTML = document.body.classList.contains('dark') 
+        ? '<i class="fas fa-sun"></i> Modo Claro' 
+        : '<i class="fas fa-moon"></i> Modo Escuro';
+    });
+  </script>
+
+</body>
+</html>
